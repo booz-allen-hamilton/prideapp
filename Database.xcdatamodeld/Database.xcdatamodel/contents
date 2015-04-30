@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Exhibitor" representedClassName="CapitalPride.Exhibitor" syncable="YES">
+        <attribute name="boothNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebook" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pocName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="exhibitor" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="FoodAndDrink" representedClassName="CapitalPride.FoodAndDrink" syncable="YES">
+        <attribute name="boothNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closeTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="cuisine" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="foodAndDrink" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Info" representedClassName="CapitalPride.Info" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="CapitalPride.Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="exhibitor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exhibitor" inverseName="location" inverseEntity="Exhibitor" syncable="YES"/>
+        <relationship name="foodAndDrink" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodAndDrink" inverseName="location" inverseEntity="FoodAndDrink" syncable="YES"/>
+    </entity>
+    <entity name="Performance" representedClassName="CapitalPride.Performance" syncable="YES">
+        <attribute name="facebook" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stopTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Exhibitor" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="FoodAndDrink" positionX="-36" positionY="9" width="128" height="135"/>
+        <element name="Info" positionX="-18" positionY="27" width="128" height="60"/>
+        <element name="Location" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Performance" positionX="-36" positionY="54" width="128" height="135"/>
+    </elements>
+</model>

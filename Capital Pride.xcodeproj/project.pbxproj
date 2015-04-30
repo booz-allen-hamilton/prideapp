@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180EC7111AED42A400D41597 /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EC7101AED42A400D41597 /* PerformanceViewController.swift */; };
+		18364BA01AEED50B003F3086 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364B9F1AEED50B003F3086 /* DBService.swift */; };
+		18364BA31AEEE292003F3086 /* Exhibitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA21AEEE292003F3086 /* Exhibitor.swift */; };
+		18364BA51AEEE293003F3086 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA41AEEE292003F3086 /* Info.swift */; };
+		18364BA71AEEE293003F3086 /* FoodAndDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA61AEEE293003F3086 /* FoodAndDrink.swift */; };
+		18364BA91AEEE293003F3086 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA81AEEE293003F3086 /* Location.swift */; };
+		18364BAB1AEEE293003F3086 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BAA1AEEE293003F3086 /* Performance.swift */; };
 		18662D1C1AE9547E0004315B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1B1AE9547E0004315B /* AppDelegate.swift */; };
-		18662D1E1AE9547E0004315B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1D1AE9547E0004315B /* FirstViewController.swift */; };
-		18662D201AE9547E0004315B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1F1AE9547E0004315B /* SecondViewController.swift */; };
+		18662D1E1AE9547E0004315B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1D1AE9547E0004315B /* MapViewController.swift */; };
+		18662D201AE9547E0004315B /* ExhibitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1F1AE9547E0004315B /* ExhibitorViewController.swift */; };
 		18662D231AE9547E0004315B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18662D211AE9547E0004315B /* Main.storyboard */; };
 		18662D251AE9547E0004315B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18662D241AE9547E0004315B /* Images.xcassets */; };
 		18662D281AE9547E0004315B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18662D261AE9547E0004315B /* LaunchScreen.xib */; };
 		18662D341AE9547E0004315B /* Capital_PrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D331AE9547E0004315B /* Capital_PrideTests.swift */; };
+		18662D3E1AE95CA70004315B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18662D3D1AE95CA70004315B /* MapKit.framework */; };
+		18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B661AEC251800C50DD9 /* InfoViewController.swift */; };
+		18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */; };
+		18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +38,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180EC7101AED42A400D41597 /* PerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
+		18364B9F1AEED50B003F3086 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBService.swift; path = ../DBService.swift; sourceTree = "<group>"; };
+		18364BA21AEEE292003F3086 /* Exhibitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exhibitor.swift; sourceTree = "<group>"; };
+		18364BA41AEEE292003F3086 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		18364BA61AEEE293003F3086 /* FoodAndDrink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrink.swift; sourceTree = "<group>"; };
+		18364BA81AEEE293003F3086 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		18364BAA1AEEE293003F3086 /* Performance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		18662D161AE9547E0004315B /* Capital Pride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capital Pride.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18662D1A1AE9547E0004315B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18662D1B1AE9547E0004315B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18662D1D1AE9547E0004315B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		18662D1F1AE9547E0004315B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18662D1D1AE9547E0004315B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		18662D1F1AE9547E0004315B /* ExhibitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitorViewController.swift; sourceTree = "<group>"; };
 		18662D221AE9547E0004315B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18662D241AE9547E0004315B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18662D271AE9547E0004315B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		18662D2D1AE9547E0004315B /* Capital PrideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Capital PrideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18662D321AE9547E0004315B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18662D331AE9547E0004315B /* Capital_PrideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital_PrideTests.swift; sourceTree = "<group>"; };
+		18662D3D1AE95CA70004315B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		18A05B661AEC251800C50DD9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinkViewController.swift; sourceTree = "<group>"; };
+		18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18662D3E1AE95CA70004315B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18364BA11AEEE243003F3086 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				18364BAA1AEEE293003F3086 /* Performance.swift */,
+				18364BA81AEEE293003F3086 /* Location.swift */,
+				18364BA61AEEE293003F3086 /* FoodAndDrink.swift */,
+				18364BA41AEEE292003F3086 /* Info.swift */,
+				18364BA21AEEE292003F3086 /* Exhibitor.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
 		18662D0D1AE9547E0004315B = {
 			isa = PBXGroup;
 			children = (
+				18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */,
+				18662D3D1AE95CA70004315B /* MapKit.framework */,
 				18662D181AE9547E0004315B /* Capital Pride */,
 				18662D301AE9547E0004315B /* Capital PrideTests */,
 				18662D171AE9547E0004315B /* Products */,
@@ -79,9 +116,14 @@
 		18662D181AE9547E0004315B /* Capital Pride */ = {
 			isa = PBXGroup;
 			children = (
+				18364BA11AEEE243003F3086 /* Domain */,
+				18364B9F1AEED50B003F3086 /* DBService.swift */,
 				18662D1B1AE9547E0004315B /* AppDelegate.swift */,
-				18662D1D1AE9547E0004315B /* FirstViewController.swift */,
-				18662D1F1AE9547E0004315B /* SecondViewController.swift */,
+				18662D1D1AE9547E0004315B /* MapViewController.swift */,
+				18A05B661AEC251800C50DD9 /* InfoViewController.swift */,
+				18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */,
+				18662D1F1AE9547E0004315B /* ExhibitorViewController.swift */,
+				180EC7101AED42A400D41597 /* PerformanceViewController.swift */,
 				18662D211AE9547E0004315B /* Main.storyboard */,
 				18662D241AE9547E0004315B /* Images.xcassets */,
 				18662D261AE9547E0004315B /* LaunchScreen.xib */,
@@ -164,6 +206,12 @@
 				TargetAttributes = {
 					18662D151AE9547E0004315B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = A2T643JV9Q;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					18662D2C1AE9547E0004315B = {
 						CreatedOnToolsVersion = 6.3;
@@ -215,9 +263,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18662D201AE9547E0004315B /* SecondViewController.swift in Sources */,
+				18662D201AE9547E0004315B /* ExhibitorViewController.swift in Sources */,
+				18364BA01AEED50B003F3086 /* DBService.swift in Sources */,
+				18364BA71AEEE293003F3086 /* FoodAndDrink.swift in Sources */,
 				18662D1C1AE9547E0004315B /* AppDelegate.swift in Sources */,
-				18662D1E1AE9547E0004315B /* FirstViewController.swift in Sources */,
+				18364BA51AEEE293003F3086 /* Info.swift in Sources */,
+				18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */,
+				18364BA31AEEE292003F3086 /* Exhibitor.swift in Sources */,
+				180EC7111AED42A400D41597 /* PerformanceViewController.swift in Sources */,
+				18364BAB1AEEE293003F3086 /* Performance.swift in Sources */,
+				18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */,
+				18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */,
+				18364BA91AEEE293003F3086 /* Location.swift in Sources */,
+				18662D1E1AE9547E0004315B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,9 +404,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Capital Pride/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -356,9 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Capital Pride/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -415,6 +479,7 @@
 				18662D391AE9547E0004315B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18662D3A1AE9547E0004315B /* Build configuration list for PBXNativeTarget "Capital PrideTests" */ = {
 			isa = XCConfigurationList;
@@ -423,8 +488,22 @@
 				18662D3C1AE9547E0004315B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */,
+			);
+			currentVersion = 18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18662D0E1AE9547E0004315B /* Project object */;
 }
