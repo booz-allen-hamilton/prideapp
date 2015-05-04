@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(Info)
 class Info: NSManagedObject {
 
     @NSManaged var text: String

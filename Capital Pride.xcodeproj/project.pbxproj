@@ -23,6 +23,7 @@
 		18662D3E1AE95CA70004315B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18662D3D1AE95CA70004315B /* MapKit.framework */; };
 		189E77941AF8118500E8D897 /* BaseBLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77931AF8118500E8D897 /* BaseBLO.swift */; };
 		189E77961AF811C500E8D897 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77951AF811C500E8D897 /* DBService.swift */; };
+		189E77981AF8263200E8D897 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77971AF8263200E8D897 /* DBLoader.swift */; };
 		18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B661AEC251800C50DD9 /* InfoViewController.swift */; };
 		18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */; };
 		18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */; };
@@ -59,6 +60,7 @@
 		18662D3D1AE95CA70004315B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		189E77931AF8118500E8D897 /* BaseBLO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBLO.swift; sourceTree = "<group>"; };
 		189E77951AF811C500E8D897 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		189E77971AF8263200E8D897 /* DBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
 		18A05B661AEC251800C50DD9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinkViewController.swift; sourceTree = "<group>"; };
 		18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				18364BA11AEEE243003F3086 /* Domain */,
 				18662D1B1AE9547E0004315B /* AppDelegate.swift */,
 				189E77951AF811C500E8D897 /* DBService.swift */,
+				189E77971AF8263200E8D897 /* DBLoader.swift */,
 				18662D1D1AE9547E0004315B /* MapViewController.swift */,
 				18A05B661AEC251800C50DD9 /* InfoViewController.swift */,
 				18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */,
@@ -278,6 +281,7 @@
 				189E77941AF8118500E8D897 /* BaseBLO.swift in Sources */,
 				18364BA71AEEE293003F3086 /* FoodAndDrink.swift in Sources */,
 				189E77961AF811C500E8D897 /* DBService.swift in Sources */,
+				189E77981AF8263200E8D897 /* DBLoader.swift in Sources */,
 				18662D1C1AE9547E0004315B /* AppDelegate.swift in Sources */,
 				18364BA51AEEE293003F3086 /* Info.swift in Sources */,
 				18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */,

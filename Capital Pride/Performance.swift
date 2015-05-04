@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(Performance)
 class Performance: NSManagedObject {
 
     @NSManaged var facebook: String

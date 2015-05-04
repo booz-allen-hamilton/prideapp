@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(FoodAndDrink)
 class FoodAndDrink: NSManagedObject {
 
     @NSManaged var boothNumber: String

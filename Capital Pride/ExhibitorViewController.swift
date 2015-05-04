@@ -9,10 +9,16 @@
 import UIKit
 
 class ExhibitorViewController: UITableViewController {
+    
+    var baseBLO: BaseBLO?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        baseBLO = BaseBLO()
+        let exhibitors: Array<Exhibitor> = baseBLO!.getAllExhibitors()
+        
+        println(exhibitors.count)
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,7 +9,8 @@
 import Foundation
 import CoreData
 
-class Exhibitor: NSManagedObject {
+@objc(Exhibitor)
+class Exhibitor: NSManagedObject{
 
     @NSManaged var boothNumber: String
     @NSManaged var companyName: String
