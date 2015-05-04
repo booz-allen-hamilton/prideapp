@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		180EC7111AED42A400D41597 /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EC7101AED42A400D41597 /* PerformanceViewController.swift */; };
-		18364BA01AEED50B003F3086 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364B9F1AEED50B003F3086 /* DBService.swift */; };
 		18364BA31AEEE292003F3086 /* Exhibitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA21AEEE292003F3086 /* Exhibitor.swift */; };
 		18364BA51AEEE293003F3086 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA41AEEE292003F3086 /* Info.swift */; };
 		18364BA71AEEE293003F3086 /* FoodAndDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BA61AEEE293003F3086 /* FoodAndDrink.swift */; };
@@ -22,6 +21,8 @@
 		18662D281AE9547E0004315B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18662D261AE9547E0004315B /* LaunchScreen.xib */; };
 		18662D341AE9547E0004315B /* Capital_PrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D331AE9547E0004315B /* Capital_PrideTests.swift */; };
 		18662D3E1AE95CA70004315B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18662D3D1AE95CA70004315B /* MapKit.framework */; };
+		189E77941AF8118500E8D897 /* BaseBLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77931AF8118500E8D897 /* BaseBLO.swift */; };
+		189E77961AF811C500E8D897 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77951AF811C500E8D897 /* DBService.swift */; };
 		18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B661AEC251800C50DD9 /* InfoViewController.swift */; };
 		18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */; };
 		18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */; };
@@ -39,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		180EC7101AED42A400D41597 /* PerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
-		18364B9F1AEED50B003F3086 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBService.swift; path = ../DBService.swift; sourceTree = "<group>"; };
 		18364BA21AEEE292003F3086 /* Exhibitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exhibitor.swift; sourceTree = "<group>"; };
 		18364BA41AEEE292003F3086 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		18364BA61AEEE293003F3086 /* FoodAndDrink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrink.swift; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		18662D321AE9547E0004315B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18662D331AE9547E0004315B /* Capital_PrideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital_PrideTests.swift; sourceTree = "<group>"; };
 		18662D3D1AE95CA70004315B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		189E77931AF8118500E8D897 /* BaseBLO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBLO.swift; sourceTree = "<group>"; };
+		189E77951AF811C500E8D897 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		18A05B661AEC251800C50DD9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinkViewController.swift; sourceTree = "<group>"; };
 		18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
@@ -116,9 +118,10 @@
 		18662D181AE9547E0004315B /* Capital Pride */ = {
 			isa = PBXGroup;
 			children = (
+				189E77921AF810E500E8D897 /* BLOs */,
 				18364BA11AEEE243003F3086 /* Domain */,
-				18364B9F1AEED50B003F3086 /* DBService.swift */,
 				18662D1B1AE9547E0004315B /* AppDelegate.swift */,
+				189E77951AF811C500E8D897 /* DBService.swift */,
 				18662D1D1AE9547E0004315B /* MapViewController.swift */,
 				18A05B661AEC251800C50DD9 /* InfoViewController.swift */,
 				18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */,
@@ -155,6 +158,14 @@
 				18662D321AE9547E0004315B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		189E77921AF810E500E8D897 /* BLOs */ = {
+			isa = PBXGroup;
+			children = (
+				189E77931AF8118500E8D897 /* BaseBLO.swift */,
+			);
+			name = BLOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18662D201AE9547E0004315B /* ExhibitorViewController.swift in Sources */,
-				18364BA01AEED50B003F3086 /* DBService.swift in Sources */,
+				189E77941AF8118500E8D897 /* BaseBLO.swift in Sources */,
 				18364BA71AEEE293003F3086 /* FoodAndDrink.swift in Sources */,
+				189E77961AF811C500E8D897 /* DBService.swift in Sources */,
 				18662D1C1AE9547E0004315B /* AppDelegate.swift in Sources */,
 				18364BA51AEEE293003F3086 /* Info.swift in Sources */,
 				18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */,
