@@ -22,7 +22,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vO-eD-o4y">
                                         <rect key="frame" x="17" y="86" width="934" height="414"/>
-                                        <mutableString key="text">Here's some additional info about Pride.  
+                                        <string key="text">Here's some additional info about Pride.  
 Here's some additional info about Pride.  
 Here's some additional info about Pride.  
 Here's some additional info about Pride.  
@@ -51,7 +51,7 @@ Here's some additional info about Pride.
 Here's some additional info about Pride.  
 Here's some additional info about Pride.  
 Here's some additional info about Pride.  
-Here's some additional info about Pride.  </mutableString>
+Here's some additional info about Pride.  </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -92,6 +92,9 @@ Here's some additional info about Pride.  </mutableString>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Festival Map" id="lDh-W0-VGA"/>
+                    <connections>
+                        <outlet property="mapView" destination="X4R-Pt-3fH" id="Lbj-Y5-ABT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +123,7 @@ Here's some additional info about Pride.  </mutableString>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="3WW-5Y-NpD" kind="show" id="ao5-SW-3Vf"/>
+                                    <segue destination="3WW-5Y-NpD" kind="show" identifier="ExhibitorDetailSegue" id="ao5-SW-3Vf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -147,10 +150,10 @@ Here's some additional info about Pride.  </mutableString>
             </objects>
             <point key="canvasLocation" x="-31" y="582"/>
         </scene>
-        <!--Exhibitor Detail View Controller-->
+        <!--Exhibitor Detail Controller-->
         <scene sceneID="RWy-do-DNL">
             <objects>
-                <viewController title="Exhibitor Detail View Controller" id="3WW-5Y-NpD" sceneMemberID="viewController">
+                <viewController id="3WW-5Y-NpD" customClass="ExhibitorDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QUh-IS-wre"/>
                         <viewControllerLayoutGuide type="bottom" id="3dO-D4-XQq"/>
@@ -159,8 +162,11 @@ Here's some additional info about Pride.  </mutableString>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="8Xa-WV-hlM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="8Xa-WV-hlM">
                                 <rect key="frame" x="16" y="90" width="568" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Zz3-6D-n70"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Organization" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsf-BO-jZV">
                                 <rect key="frame" x="16" y="254" width="93" height="21"/>
@@ -259,6 +265,12 @@ Here's some additional info about Pride.  </mutableString>
                             <constraint firstItem="8Xa-WV-hlM" firstAttribute="leading" secondItem="hsf-BO-jZV" secondAttribute="leading" id="yiU-be-8vD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="companyName" destination="f2N-Tu-0sg" id="mcr-WC-nGB"/>
+                        <outlet property="descriptionText" destination="Hxj-qf-Z1y" id="qLO-IR-UG1"/>
+                        <outlet property="location" destination="gg0-vx-fbR" id="37J-Ia-574"/>
+                        <outlet property="website" destination="7v5-Dq-Nid" id="g1E-fL-TYP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtL-0a-2ZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,8 +288,11 @@ Here's some additional info about Pride.  </mutableString>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="A36-JK-JX6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="A36-JK-JX6">
                                 <rect key="frame" x="16" y="90" width="568" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Eyo-T4-2Ia"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Performer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URo-fQ-6VD">
                                 <rect key="frame" x="16" y="254" width="93" height="21"/>
@@ -518,8 +533,11 @@ Here's some additional info about Pride.  </mutableString>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="spp-5S-rKP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="spp-5S-rKP">
                                 <rect key="frame" x="16" y="90" width="568" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="08E-Mo-HEP"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vendor" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-Jg-erm">
                                 <rect key="frame" x="16" y="254" width="99" height="21"/>
@@ -725,9 +743,9 @@ Here's some additional info about Pride.  </mutableString>
     <resources>
         <image name="beer" width="23" height="28"/>
         <image name="case" width="27" height="25"/>
-        <image name="google" width="538" height="190"/>
         <image name="info" width="12" height="29"/>
         <image name="map" width="24" height="25"/>
         <image name="mic" width="28" height="28"/>
+        <image name="pride alliance" width="580" height="580"/>
     </resources>
 </document>

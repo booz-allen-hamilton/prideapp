@@ -24,6 +24,9 @@
 		189E77941AF8118500E8D897 /* BaseBLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77931AF8118500E8D897 /* BaseBLO.swift */; };
 		189E77961AF811C500E8D897 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77951AF811C500E8D897 /* DBService.swift */; };
 		189E77981AF8263200E8D897 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77971AF8263200E8D897 /* DBLoader.swift */; };
+		189E779A1AF8451D00E8D897 /* FestivalExhibitors2015.csv in Resources */ = {isa = PBXBuildFile; fileRef = 189E77991AF8451D00E8D897 /* FestivalExhibitors2015.csv */; };
+		189E779C1B0170AD00E8D897 /* FestivalExhibitors2015.txt in Resources */ = {isa = PBXBuildFile; fileRef = 189E779B1B0170AD00E8D897 /* FestivalExhibitors2015.txt */; };
+		189E779E1B0186A300E8D897 /* ExhibitorDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E779D1B0186A300E8D897 /* ExhibitorDetailController.swift */; };
 		18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B661AEC251800C50DD9 /* InfoViewController.swift */; };
 		18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */; };
 		18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */; };
@@ -61,6 +64,9 @@
 		189E77931AF8118500E8D897 /* BaseBLO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBLO.swift; sourceTree = "<group>"; };
 		189E77951AF811C500E8D897 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		189E77971AF8263200E8D897 /* DBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
+		189E77991AF8451D00E8D897 /* FestivalExhibitors2015.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FestivalExhibitors2015.csv; sourceTree = "<group>"; };
+		189E779B1B0170AD00E8D897 /* FestivalExhibitors2015.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FestivalExhibitors2015.txt; sourceTree = "<group>"; };
+		189E779D1B0186A300E8D897 /* ExhibitorDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitorDetailController.swift; sourceTree = "<group>"; };
 		18A05B661AEC251800C50DD9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinkViewController.swift; sourceTree = "<group>"; };
 		18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				18A05B661AEC251800C50DD9 /* InfoViewController.swift */,
 				18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */,
 				18662D1F1AE9547E0004315B /* ExhibitorViewController.swift */,
+				189E779D1B0186A300E8D897 /* ExhibitorDetailController.swift */,
 				180EC7101AED42A400D41597 /* PerformanceViewController.swift */,
 				18662D211AE9547E0004315B /* Main.storyboard */,
 				18662D241AE9547E0004315B /* Images.xcassets */,
@@ -141,6 +148,8 @@
 		18662D191AE9547E0004315B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				189E779B1B0170AD00E8D897 /* FestivalExhibitors2015.txt */,
+				189E77991AF8451D00E8D897 /* FestivalExhibitors2015.csv */,
 				18662D1A1AE9547E0004315B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -258,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18662D231AE9547E0004315B /* Main.storyboard in Resources */,
+				189E779C1B0170AD00E8D897 /* FestivalExhibitors2015.txt in Resources */,
+				189E779A1AF8451D00E8D897 /* FestivalExhibitors2015.csv in Resources */,
 				18662D281AE9547E0004315B /* LaunchScreen.xib in Resources */,
 				18662D251AE9547E0004315B /* Images.xcassets in Resources */,
 			);
@@ -292,6 +303,7 @@
 				18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */,
 				18364BA91AEEE293003F3086 /* Location.swift in Sources */,
 				18662D1E1AE9547E0004315B /* MapViewController.swift in Sources */,
+				189E779E1B0186A300E8D897 /* ExhibitorDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

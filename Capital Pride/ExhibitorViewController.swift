@@ -11,12 +11,14 @@ import UIKit
 class ExhibitorViewController: UITableViewController {
     
     var baseBLO: BaseBLO?
+    var exhibitors: [Exhibitor] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         baseBLO = BaseBLO()
-        let exhibitors: Array<Exhibitor> = baseBLO!.getAllExhibitors()
+        exhibitors = baseBLO!.getAllExhibitors()
+        exhibitors = sorted(exhibitors){ $0.companyName.lowercaseString < $1.companyName.lowercaseString }
         
         println(exhibitors.count)
     }
@@ -25,8 +27,6 @@ class ExhibitorViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    let exhibitors = ["Booz Allen Hamilton","Human Rights Campaign","No Cover DC","Haliburton"]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exhibitors.count
@@ -36,9 +36,19 @@ class ExhibitorViewController: UITableViewController {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("exhibitorCell") as! UITableViewCell
         
-        cell.textLabel!.text = exhibitors[indexPath.row]
+        cell.textLabel!.text = exhibitors[indexPath.row].companyName
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ExhibitorDetailSegue"
+        {
+            if let destinationVC = segue.destinationViewController as? ExhibitorDetailController{
+                let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
+                destinationVC.exhibitor = exhibitors[indexPath.row]
+            }
+        }
     }
     
 }

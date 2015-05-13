@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class DBLoader: NSObject{
     
@@ -19,34 +20,83 @@ class DBLoader: NSObject{
     }
     
     func loadDB(){
-        loadExhibitors()
-        loadFoodAndDrinks()
-        loadPerformances()
-        loadInfo()
-        svc.saveContext()
+        if dbEmpty(){
+            loadExhibitors()
+            loadFoodAndDrinks()
+            loadPerformances()
+            loadInfo()
+            svc.saveContext()
+        }
+    }
+    
+    func dbEmpty() -> Bool{
+        let list: [NSManagedObject] = svc.getEntityList("Exhibitor")!
+        
+        if list.count == 0 {
+            return true
+        }else{
+            return false
+        }
     }
     
     func loadExhibitors(){
-        let ex1: Exhibitor = svc.getNewEntityByType("Exhibitor") as! Exhibitor
-        ex1.boothNumber = "B24"
-        ex1.companyName = "Booz Allen Hamilton"
-        ex1.descriptionText = "Description Description Description Description Description Description"
-        ex1.facebook = "fb.com/bah"
-        ex1.pocName = "John Cloutier"
-        ex1.twitter = "@boozallenhamilton"
-        ex1.website = "http://www.bah.com"
+        let exhibs: [[String]] = parseCSV()
+        
+        for ex in exhibs{
+            let exhibitor: Exhibitor = svc.getNewEntityByType("Exhibitor") as! Exhibitor
+            exhibitor.boothNumber = ex[0]
+            exhibitor.companyName = ex[1]
+            exhibitor.descriptionText = ex[2]
+            exhibitor.website = ex[3]
+            exhibitor.facebook = ex[4]
+            exhibitor.pocName = "John Cloutier"
+            exhibitor.twitter = ex[5]
+        }
     }
     
     func loadFoodAndDrinks(){
-        
+        let foodAndDrink: FoodAndDrink = svc.getNewEntityByType("FoodAndDrink") as! FoodAndDrink
+        foodAndDrink.boothNumber = "B45"
+        foodAndDrink.closeTime = NSTimeInterval()
+        foodAndDrink.cuisine = "Drinks"
+        foodAndDrink.name = "Beer 'n More"
+        foodAndDrink.openTime = NSTimeInterval()
     }
     
     func loadPerformances(){
-    
+        let performance: Performance = svc.getNewEntityByType("Performance") as! Performance
+        performance.facebook = "fb.com/cher"
+        performance.name = "Cher"
+        performance.startTime = NSTimeInterval()
+        performance.stopTime = NSTimeInterval()
+        performance.twitter = "@cher"
+        performance.website = "http://www.cher.com"
     }
     
     func loadInfo(){
+        let info: Info = svc.getNewEntityByType("Info") as! Info
+        info.text = "Here's some info Here's some info Here's some info Here's some info Here's some info"
+    }
+    
+    func parseCSV() -> [[String]]{
+        var array = [String]()
+        var exhibs = [[String]]()
+        var bad = [[String]]()
+        let path = NSBundle.mainBundle().pathForResource("FestivalExhibitors2015", ofType: "txt")
         
+        if let content = String(contentsOfFile:path!, encoding: NSUTF8StringEncoding, error: nil) {
+            array = content.componentsSeparatedByString("\n")
+        }
+        
+        for line in array{
+            let row: [String] = split(line, allowEmptySlices: true, isSeparator: {$0 == "\t"})
+            if row.count == 7 {
+                exhibs.append(row)
+            }else{
+                println("Bad line not added to DB: " + line)
+            }
+        }
+        return exhibs
     }
     
     
