@@ -8,7 +8,11 @@
 
 import UIKit
 
-class PerformanceViewController: UITableViewController {
+class PerformanceViewController: UITableViewController, UISearchResultsUpdating {
+    
+    var performances: [Performance] = []
+    var filteredTableData = [Performance]()
+    var resultSearchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +24,37 @@ class PerformanceViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let performances = ["Cher","Madonna","Bette","Beyonce"]
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return performances.count
+        
+        if (self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return performances.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("performanceCell") as! UITableViewCell
-        
-        cell.textLabel!.text = performances[indexPath.row]
-        
-        return cell
+        if (self.resultSearchController.active) {
+            cell.textLabel?.text = filteredTableData[indexPath.row].name
+            return cell
+        }
+        else {
+            cell.textLabel?.text = performances[indexPath.row].name
+            return cell
+        }
+    }
+    
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
+        let array = (performances as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [Performance]
+        self.tableView.reloadData()
     }
 }
 
