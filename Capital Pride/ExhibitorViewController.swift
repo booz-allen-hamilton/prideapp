@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ExhibitorViewController: UITableViewController {
+class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
     
     var baseBLO: BaseBLO?
     var exhibitors: [Exhibitor] = []
+    
+    var filteredTableData = [Exhibitor]()
+    var resultSearchController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,20 @@ class ExhibitorViewController: UITableViewController {
         exhibitors = sorted(exhibitors){ $0.companyName.lowercaseString < $1.companyName.lowercaseString }
         
         println(exhibitors.count)
+        
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            
+            return controller
+        })()
+        
+        // Reload the table
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,16 +46,36 @@ class ExhibitorViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exhibitors.count
+        
+        if (self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return exhibitors.count
+        }
+        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("exhibitorCell") as! UITableViewCell
-        
-        cell.textLabel!.text = exhibitors[indexPath.row].companyName
-        
-        return cell
+        if (self.resultSearchController.active) {
+            cell.textLabel?.text = filteredTableData[indexPath.row].companyName
+            return cell
+        }
+        else {
+            cell.textLabel?.text = exhibitors[indexPath.row].companyName
+            return cell
+        }
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        let searchPredicate = NSPredicate(format: "SELF.companyName CONTAINS[c] %@", searchController.searchBar.text)
+        let array = (exhibitors as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [Exhibitor]
+        self.tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

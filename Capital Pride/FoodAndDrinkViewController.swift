@@ -8,7 +8,11 @@
 
 import UIKit
 
-class FoodAndDrinkViewController: UITableViewController {
+class FoodAndDrinkViewController: UITableViewController,  UISearchResultsUpdating{
+    
+    var filteredTableData = [FoodAndDrink]()
+    var resultSearchController = UISearchController()
+    var foodAndDrinks: [FoodAndDrink] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +24,38 @@ class FoodAndDrinkViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    let foodAndDrinks = ["Beer","Wine","Vodka","Gin"]
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodAndDrinks.count
+        
+        if (self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return foodAndDrinks.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("foodAndDrinkCell") as! UITableViewCell
-        
-        cell.textLabel!.text = foodAndDrinks[indexPath.row]
-        
-        return cell
+        if (self.resultSearchController.active) {
+            cell.textLabel?.text = filteredTableData[indexPath.row].name
+            return cell
+        }
+        else {
+            cell.textLabel?.text = foodAndDrinks[indexPath.row].name
+            return cell
+        }
     }
+    
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
+        let array = (foodAndDrinks as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [FoodAndDrink]
+        self.tableView.reloadData()
+    }
+    
+
 }
