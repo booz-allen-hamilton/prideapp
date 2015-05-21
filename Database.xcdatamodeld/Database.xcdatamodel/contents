@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BAH" representedClassName="BAH" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="poc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pocEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="techDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="boothNumber" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="bah" inverseEntity="Location" syncable="YES"/>
+    </entity>
     <entity name="Exhibitor" representedClassName="Exhibitor" syncable="YES">
         <attribute name="boothNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,6 +34,7 @@
     <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="bah" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BAH" inverseName="boothNumber" inverseEntity="BAH" syncable="YES"/>
         <relationship name="exhibitor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exhibitor" inverseName="location" inverseEntity="Exhibitor" syncable="YES"/>
         <relationship name="foodAndDrink" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodAndDrink" inverseName="location" inverseEntity="FoodAndDrink" syncable="YES"/>
     </entity>
@@ -39,7 +50,8 @@
         <element name="Exhibitor" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="FoodAndDrink" positionX="-36" positionY="9" width="128" height="135"/>
         <element name="Info" positionX="-18" positionY="27" width="128" height="60"/>
-        <element name="Location" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Location" positionX="-54" positionY="-9" width="128" height="120"/>
         <element name="Performance" positionX="-36" positionY="54" width="128" height="135"/>
+        <element name="BAH" positionX="252" positionY="132" width="128" height="163"/>
     </elements>
 </model>
