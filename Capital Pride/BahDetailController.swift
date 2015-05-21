@@ -16,6 +16,7 @@ class BahDetailController: UIViewController {
   //  @IBOutlet weak var location: UITextField!
   //  @IBOutlet weak var descriptionText: UITextView!
     
+    
         var bah: BAH?
     
 /*    @NSManaged var image: String
@@ -32,10 +33,9 @@ class BahDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   //     location.text = exhibitor!.boothNumber
-     //   companyName.text = exhibitor!.companyName
-     //   descriptionText.text = exhibitor!.descriptionText
-     //   website.text = exhibitor!.website
+// load some shit
+        
+        
         self.title = bahs!.name
     }
     
@@ -43,8 +43,6 @@ class BahDetailController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 
     
 }

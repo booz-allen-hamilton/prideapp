@@ -80,5 +80,16 @@ class BahViewController: UITableViewController, UISearchResultsUpdating{
     }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "BahDetailSegue"
+        {
+            if let destinationVC = segue.destinationViewController as? BahDetailController{
+                let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
+                destinationVC.bah = bahs[indexPath.row]
+            }
+        }
+    }
+    
+    
     
 }
