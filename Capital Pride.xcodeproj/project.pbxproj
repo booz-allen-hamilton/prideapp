@@ -15,6 +15,8 @@
 		18364BAB1AEEE293003F3086 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18364BAA1AEEE293003F3086 /* Performance.swift */; };
 		183E03F21B0D61C3009DC9E2 /* BAH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E03F11B0D61C3009DC9E2 /* BAH.swift */; };
 		183E03F41B0D6223009DC9E2 /* BahViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E03F31B0D6223009DC9E2 /* BahViewController.swift */; };
+		183E03F81B0D6747009DC9E2 /* BahDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E03F71B0D6747009DC9E2 /* BahDetailController.swift */; };
+		183E03FA1B0D67C2009DC9E2 /* ExhibitorDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E03F91B0D67C2009DC9E2 /* ExhibitorDetailController.swift */; };
 		18662D1C1AE9547E0004315B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1B1AE9547E0004315B /* AppDelegate.swift */; };
 		18662D1E1AE9547E0004315B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1D1AE9547E0004315B /* MapViewController.swift */; };
 		18662D201AE9547E0004315B /* ExhibitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18662D1F1AE9547E0004315B /* ExhibitorViewController.swift */; };
@@ -28,7 +30,6 @@
 		189E77981AF8263200E8D897 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E77971AF8263200E8D897 /* DBLoader.swift */; };
 		189E779A1AF8451D00E8D897 /* FestivalExhibitors2015.csv in Resources */ = {isa = PBXBuildFile; fileRef = 189E77991AF8451D00E8D897 /* FestivalExhibitors2015.csv */; };
 		189E779C1B0170AD00E8D897 /* FestivalExhibitors2015.txt in Resources */ = {isa = PBXBuildFile; fileRef = 189E779B1B0170AD00E8D897 /* FestivalExhibitors2015.txt */; };
-		189E779E1B0186A300E8D897 /* ExhibitorDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E779D1B0186A300E8D897 /* ExhibitorDetailController.swift */; };
 		18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B661AEC251800C50DD9 /* InfoViewController.swift */; };
 		18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */; };
 		18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */; };
@@ -53,6 +54,8 @@
 		18364BAA1AEEE293003F3086 /* Performance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		183E03F11B0D61C3009DC9E2 /* BAH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAH.swift; sourceTree = "<group>"; };
 		183E03F31B0D6223009DC9E2 /* BahViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BahViewController.swift; sourceTree = "<group>"; };
+		183E03F71B0D6747009DC9E2 /* BahDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BahDetailController.swift; sourceTree = "<group>"; };
+		183E03F91B0D67C2009DC9E2 /* ExhibitorDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitorDetailController.swift; sourceTree = "<group>"; };
 		18662D161AE9547E0004315B /* Capital Pride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capital Pride.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18662D1A1AE9547E0004315B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18662D1B1AE9547E0004315B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +73,6 @@
 		189E77971AF8263200E8D897 /* DBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
 		189E77991AF8451D00E8D897 /* FestivalExhibitors2015.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FestivalExhibitors2015.csv; sourceTree = "<group>"; };
 		189E779B1B0170AD00E8D897 /* FestivalExhibitors2015.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FestivalExhibitors2015.txt; sourceTree = "<group>"; };
-		189E779D1B0186A300E8D897 /* ExhibitorDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitorDetailController.swift; sourceTree = "<group>"; };
 		18A05B661AEC251800C50DD9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinkViewController.swift; sourceTree = "<group>"; };
 		18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
@@ -104,7 +106,6 @@
 				18364BA41AEEE292003F3086 /* Info.swift */,
 				18364BA21AEEE292003F3086 /* Exhibitor.swift */,
 				183E03F11B0D61C3009DC9E2 /* BAH.swift */,
-				183E03F31B0D6223009DC9E2 /* BahViewController.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -137,11 +138,13 @@
 				18662D1B1AE9547E0004315B /* AppDelegate.swift */,
 				189E77951AF811C500E8D897 /* DBService.swift */,
 				189E77971AF8263200E8D897 /* DBLoader.swift */,
+				183E03F31B0D6223009DC9E2 /* BahViewController.swift */,
+				183E03F71B0D6747009DC9E2 /* BahDetailController.swift */,
 				18662D1D1AE9547E0004315B /* MapViewController.swift */,
 				18A05B661AEC251800C50DD9 /* InfoViewController.swift */,
 				18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */,
 				18662D1F1AE9547E0004315B /* ExhibitorViewController.swift */,
-				189E779D1B0186A300E8D897 /* ExhibitorDetailController.swift */,
+				183E03F91B0D67C2009DC9E2 /* ExhibitorDetailController.swift */,
 				180EC7101AED42A400D41597 /* PerformanceViewController.swift */,
 				18662D211AE9547E0004315B /* Main.storyboard */,
 				18662D241AE9547E0004315B /* Images.xcassets */,
@@ -297,6 +300,7 @@
 				18662D201AE9547E0004315B /* ExhibitorViewController.swift in Sources */,
 				189E77941AF8118500E8D897 /* BaseBLO.swift in Sources */,
 				18364BA71AEEE293003F3086 /* FoodAndDrink.swift in Sources */,
+				183E03FA1B0D67C2009DC9E2 /* ExhibitorDetailController.swift in Sources */,
 				189E77961AF811C500E8D897 /* DBService.swift in Sources */,
 				189E77981AF8263200E8D897 /* DBLoader.swift in Sources */,
 				18662D1C1AE9547E0004315B /* AppDelegate.swift in Sources */,
@@ -311,7 +315,7 @@
 				18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */,
 				18364BA91AEEE293003F3086 /* Location.swift in Sources */,
 				18662D1E1AE9547E0004315B /* MapViewController.swift in Sources */,
-				189E779E1B0186A300E8D897 /* ExhibitorDetailController.swift in Sources */,
+				183E03F81B0D6747009DC9E2 /* BahDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
