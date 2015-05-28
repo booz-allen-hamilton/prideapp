@@ -37,7 +37,7 @@ class PerformanceViewController: UITableViewController, UISearchResultsUpdating 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("performanceCell") as! UITableViewCell
-        if (self.resultSearchController.active) {
+        if (self.resultSearchController.active && resultSearchController.searchBar.text != "") {
             cell.textLabel?.text = filteredTableData[indexPath.row].name
             return cell
         }
@@ -50,11 +50,13 @@ class PerformanceViewController: UITableViewController, UISearchResultsUpdating 
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
-        filteredTableData.removeAll(keepCapacity: false)
-        let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
-        let array = (performances as NSArray).filteredArrayUsingPredicate(searchPredicate)
-        filteredTableData = array as! [Performance]
-        self.tableView.reloadData()
+        if (searchController.searchBar.text != ""){
+            filteredTableData.removeAll(keepCapacity: false)
+            let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
+            let array = (performances as NSArray).filteredArrayUsingPredicate(searchPredicate)
+            filteredTableData = array as! [Performance]
+            self.tableView.reloadData()
+        }
     }
 }
 

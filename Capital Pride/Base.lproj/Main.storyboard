@@ -8,7 +8,6 @@
         <!--Info View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController title="Info View Controller" id="9pv-A4-QxB" customClass="InfoViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
@@ -64,6 +63,7 @@ Here's some additional info about Pride.  </string>
                     </view>
                     <navigationItem key="navigationItem" title="Festival Info" id="CRH-Su-bWq"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-43" y="-252"/>
         </scene>
@@ -75,7 +75,7 @@ Here's some additional info about Pride.  </string>
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="uG2-aG-nNy">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="uG2-aG-nNy">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -99,7 +99,7 @@ Here's some additional info about Pride.  </string>
                             <outlet property="delegate" destination="wmZ-47-iec" id="Uny-r0-IER"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Exhibitor List" id="Fey-Nh-YYf"/>
+                    <navigationItem key="navigationItem" title="Exhibitors" id="Fey-Nh-YYf"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="OIU-Ab-GkP" id="34l-hE-J9n"/>
                     </connections>
@@ -246,7 +246,7 @@ Here's some additional info about Pride.  </string>
         <!--Performance Detail View Controller-->
         <scene sceneID="d3M-xf-nrb">
             <objects>
-                <viewController title="Performance Detail View Controller" id="C4Q-ca-8VP" sceneMemberID="viewController">
+                <viewController title="Performance Detail View Controller" id="C4Q-ca-8VP" customClass="PerformanceDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HaN-aF-cJh"/>
                         <viewControllerLayoutGuide type="bottom" id="oLR-th-wc8"/>
@@ -280,7 +280,7 @@ Here's some additional info about Pride.  </string>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.cher.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPq-U9-IIO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://fb.com/cher" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPq-U9-IIO">
                                 <rect key="frame" x="126" y="283" width="458" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jPl-92-PW6"/>
@@ -289,7 +289,7 @@ Here's some additional info about Pride.  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Schedule" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-he-WJR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-he-WJR">
                                 <rect key="frame" x="16" y="320" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="h4z-ve-K2E"/>
@@ -303,13 +303,7 @@ Here's some additional info about Pride.  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-un-Px8">
-                                <rect key="frame" x="117" y="353" width="467" height="198"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-FP-f8N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Website" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-FP-f8N">
                                 <rect key="frame" x="16" y="353" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="HNN-1Z-JWg"/>
@@ -326,6 +320,13 @@ Here's some additional info about Pride.  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="http://www.cher.com" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-un-Px8">
+                                <rect key="frame" x="117" y="345" width="467" height="198"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,10 +360,16 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="E3A-uF-v3J" firstAttribute="leading" secondItem="URo-fQ-6VD" secondAttribute="trailing" constant="17" id="oQ5-Br-on8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebook" destination="PPq-U9-IIO" id="Bdw-Aw-sHv"/>
+                        <outlet property="name" destination="E3A-uF-v3J" id="crm-pJ-f0M"/>
+                        <outlet property="startTime" destination="far-Aa-Xbk" id="Gk4-Ni-xrt"/>
+                        <outlet property="website" destination="Uma-un-Px8" id="R9F-NZ-tfp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XW0-ic-kgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="1278"/>
+            <point key="canvasLocation" x="738" y="1284"/>
         </scene>
         <!--Performances View Controller-->
         <scene sceneID="OsJ-Zr-R48">
@@ -372,7 +379,7 @@ Here's some additional info about Pride.  </string>
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="Ofg-2k-dOC">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Ofg-2k-dOC">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -412,17 +419,17 @@ Here's some additional info about Pride.  </string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-31" y="1278"/>
+            <point key="canvasLocation" x="-31" y="1284"/>
         </scene>
-        <!--BAH Tech View Controller-->
+        <!--Technology View Controller-->
         <scene sceneID="t1T-HY-a6R">
             <objects>
-                <tableViewController title="BAH Tech View Controller" id="0cd-d8-wwr" customClass="BahViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Technology View Controller" id="0cd-d8-wwr" customClass="TechnologyViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jRl-Lb-rVU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" text="" id="WfE-15-1Bx">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="WfE-15-1Bx">
                             <rect key="frame" x="129" y="-16" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -446,7 +453,7 @@ Here's some additional info about Pride.  </string>
                             <outlet property="delegate" destination="0cd-d8-wwr" id="xzI-TU-plS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="SRl-RK-0xv"/>
+                    <navigationItem key="navigationItem" title="Technologies" id="SRl-RK-0xv"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="eE0-GB-zt0" id="xQI-h7-ULl"/>
                     </connections>
@@ -464,25 +471,25 @@ Here's some additional info about Pride.  </string>
             </objects>
             <point key="canvasLocation" x="-2" y="2116"/>
         </scene>
-        <!--BAH Detail-->
+        <!--Technology Detail View Controller-->
         <scene sceneID="JY7-m2-uB8">
             <objects>
-                <viewController title="BAH Detail" id="xTh-4E-r2n" sceneMemberID="viewController">
+                <viewController title="Technology Detail View Controller" id="xTh-4E-r2n" customClass="TechnologyDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CZu-4e-YbL"/>
                         <viewControllerLayoutGuide type="bottom" id="8cW-8E-Xkc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5ts-bR-AdZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bah-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-sX-fLC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bah-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-sX-fLC">
                                 <rect key="frame" x="16" y="90" width="568" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="V1A-th-i4c"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Technology" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-Yz-oSd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-Yz-oSd">
                                 <rect key="frame" x="16" y="254" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="tHc-UE-5G8"/>
@@ -492,15 +499,7 @@ Here's some additional info about Pride.  </string>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cher" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Exl-ua-2Lb">
-                                <rect key="frame" x="126" y="248" width="458" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jnx-uO-2XG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lead" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-lZ-4Mr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-lZ-4Mr">
                                 <rect key="frame" x="16" y="287" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="XCs-4s-ks9"/>
@@ -509,16 +508,15 @@ Here's some additional info about Pride.  </string>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.cher.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wq7-pf-Ebl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bob Smith" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wq7-pf-Ebl">
                                 <rect key="frame" x="126" y="283" width="458" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QU8-ag-wZ9"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="More Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mi-xA-tcg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Lead" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mi-xA-tcg">
                                 <rect key="frame" x="16" y="320" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="06R-bA-n04"/>
@@ -527,18 +525,23 @@ Here's some additional info about Pride.  </string>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3:00pm - 3:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fP-rG-HJW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3:00pm - 3:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fP-rG-HJW">
                                 <rect key="frame" x="126" y="316" width="458" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKp-3c-0rW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKp-3c-0rW">
                                 <rect key="frame" x="117" y="353" width="467" height="198"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="EJD-qq-aE2"/>
+                                    <constraint firstAttribute="width" constant="467" id="zVg-LE-ywq"/>
+                                </constraints>
+                                <mutableString key="text">http://www.google.com   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1y-LP-A8m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1y-LP-A8m">
                                 <rect key="frame" x="16" y="353" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9Nb-yS-x70"/>
@@ -547,6 +550,14 @@ Here's some additional info about Pride.  </string>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cher" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Exl-ua-2Lb">
+                                <rect key="frame" x="126" y="250" width="458" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jnx-uO-2XG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -554,11 +565,13 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="JbE-Yz-oSd" firstAttribute="trailing" secondItem="Vsg-lZ-4Mr" secondAttribute="trailing" id="7ee-Zj-5em"/>
                             <constraint firstItem="JKp-3c-0rW" firstAttribute="leading" secondItem="H1y-LP-A8m" secondAttribute="trailing" constant="8" symbolic="YES" id="9EW-NO-aLw"/>
                             <constraint firstItem="MqN-sX-fLC" firstAttribute="trailing" secondItem="Exl-ua-2Lb" secondAttribute="trailing" id="IuK-K6-VUm"/>
+                            <constraint firstItem="JKp-3c-0rW" firstAttribute="trailing" secondItem="5ts-bR-AdZ" secondAttribute="trailingMargin" id="JQB-An-LgB"/>
                             <constraint firstItem="Exl-ua-2Lb" firstAttribute="top" secondItem="MqN-sX-fLC" secondAttribute="bottom" constant="18" id="KvK-wy-CTS"/>
                             <constraint firstItem="6fP-rG-HJW" firstAttribute="top" secondItem="wq7-pf-Ebl" secondAttribute="bottom" constant="3" id="MoP-kI-sNl"/>
                             <constraint firstItem="JKp-3c-0rW" firstAttribute="top" secondItem="6fP-rG-HJW" secondAttribute="bottom" constant="8" symbolic="YES" id="NUp-7S-EEQ"/>
                             <constraint firstItem="JKp-3c-0rW" firstAttribute="top" secondItem="H1y-LP-A8m" secondAttribute="top" id="Osr-xj-kxl"/>
                             <constraint firstItem="6Mi-xA-tcg" firstAttribute="leading" secondItem="Vsg-lZ-4Mr" secondAttribute="leading" id="P3N-GR-YP0"/>
+                            <constraint firstItem="JKp-3c-0rW" firstAttribute="bottom" secondItem="8cW-8E-Xkc" secondAttribute="top" id="PPU-NK-tr8"/>
                             <constraint firstItem="Vsg-lZ-4Mr" firstAttribute="leading" secondItem="JbE-Yz-oSd" secondAttribute="leading" id="QR9-5J-zez"/>
                             <constraint firstItem="6fP-rG-HJW" firstAttribute="trailing" secondItem="wq7-pf-Ebl" secondAttribute="trailing" id="SDL-LV-xCU"/>
                             <constraint firstItem="wq7-pf-Ebl" firstAttribute="trailing" secondItem="Exl-ua-2Lb" secondAttribute="trailing" id="Skf-9f-3Lu"/>
@@ -576,18 +589,24 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="Exl-ua-2Lb" firstAttribute="leading" secondItem="JbE-Yz-oSd" secondAttribute="trailing" constant="17" id="uCe-Fz-3VT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="poc" destination="wq7-pf-Ebl" id="cff-nM-U89"/>
+                        <outlet property="pocEmail" destination="6fP-rG-HJW" id="qYe-Yp-K1I"/>
+                        <outlet property="techDescription" destination="JKp-3c-0rW" id="wZv-x6-ZYH"/>
+                        <outlet property="url" destination="Exl-ua-2Lb" id="8Xd-VS-pUj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QO-Jc-tsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="2116"/>
         </scene>
-        <!--BAH-->
+        <!--Technologies-->
         <scene sceneID="ggX-V5-AqI">
             <objects>
                 <navigationController id="zA0-66-9rc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="BAH" image="glass" id="aOT-Jl-yW4"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="uEK-bP-Hu0">
+                    <tabBarItem key="tabBarItem" title="Technologies" image="glass" id="aOT-Jl-yW4"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="uEK-bP-Hu0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -626,22 +645,12 @@ Here's some additional info about Pride.  </string>
         <!--Food And Drink View Controller-->
         <scene sceneID="IyC-wg-mbu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WF5-Td-c1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="aRT-8f-g2X">
-                    <connections>
-                        <outlet property="delegate" destination="gMJ-CL-EKN" id="3SC-Tj-oWl"/>
-                        <outlet property="searchBar" destination="2aL-OC-KZ1" id="abv-Uv-UIE"/>
-                        <outlet property="searchContentsController" destination="gMJ-CL-EKN" id="ZET-2s-RgB"/>
-                        <outlet property="searchResultsDataSource" destination="gMJ-CL-EKN" id="hF3-L1-IeG"/>
-                        <outlet property="searchResultsDelegate" destination="gMJ-CL-EKN" id="k3v-ZN-U8P"/>
-                    </connections>
-                </searchDisplayController>
                 <tableViewController title="Food And Drink View Controller" id="gMJ-CL-EKN" customClass="FoodAndDrinkViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pBv-Mo-WFU">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="2aL-OC-KZ1">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="2aL-OC-KZ1">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -670,14 +679,23 @@ Here's some additional info about Pride.  </string>
                         <outlet property="searchDisplayController" destination="aRT-8f-g2X" id="SPE-5N-AeG"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WF5-Td-c1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="aRT-8f-g2X">
+                    <connections>
+                        <outlet property="delegate" destination="gMJ-CL-EKN" id="3SC-Tj-oWl"/>
+                        <outlet property="searchBar" destination="2aL-OC-KZ1" id="abv-Uv-UIE"/>
+                        <outlet property="searchContentsController" destination="gMJ-CL-EKN" id="ZET-2s-RgB"/>
+                        <outlet property="searchResultsDataSource" destination="gMJ-CL-EKN" id="hF3-L1-IeG"/>
+                        <outlet property="searchResultsDelegate" destination="gMJ-CL-EKN" id="k3v-ZN-U8P"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-43" y="-958"/>
         </scene>
         <!--Food And Drink Detail View Controller-->
         <scene sceneID="BT7-rX-ZoU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qdK-Y5-cY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Food And Drink Detail View Controller" id="GM2-3C-hVv" sceneMemberID="viewController">
+                <viewController title="Food And Drink Detail View Controller" id="GM2-3C-hVv" customClass="FoodAndDrinkDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e8O-8w-up7"/>
                         <viewControllerLayoutGuide type="bottom" id="kMT-JK-67v"/>
@@ -787,14 +805,20 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="spp-5S-rKP" firstAttribute="trailing" secondItem="0Cs-Xg-jZx" secondAttribute="trailing" id="xjJ-94-kjZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="boothNumber" destination="ChN-rT-baS" id="OBf-Fw-6LS"/>
+                        <outlet property="cuisine" destination="Hku-SK-g3M" id="PJa-9D-HEg"/>
+                        <outlet property="name" destination="0Cs-Xg-jZx" id="JaR-XG-8e2"/>
+                        <outlet property="openTime" destination="iob-ai-hau" id="ygZ-Fo-sbp"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdK-Y5-cY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="726" y="-958"/>
         </scene>
         <!--Food & Drink-->
         <scene sceneID="DcY-2d-9sA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EA5-Mm-Flw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQL-ZL-8Sb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Food &amp; Drink" image="beer" id="FTR-Se-Yeq"/>
                     <toolbarItems/>
@@ -808,13 +832,13 @@ Here's some additional info about Pride.  </string>
                         <segue destination="gMJ-CL-EKN" kind="relationship" relationship="rootViewController" id="cBF-vg-Yjt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EA5-Mm-Flw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-855" y="-958"/>
         </scene>
         <!--Info-->
         <scene sceneID="v5Q-nE-nG9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ASe-gm-gue" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5y6-RG-W5S" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="Gix-z3-TuT"/>
                     <toolbarItems/>
@@ -828,6 +852,7 @@ Here's some additional info about Pride.  </string>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="S0H-5b-PlB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASe-gm-gue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-855" y="-252"/>
         </scene>

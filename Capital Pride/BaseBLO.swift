@@ -37,8 +37,8 @@ class BaseBLO: NSObject{
         return svc.getEntityList("Info") as! [Info]
     }
     
-    func getAllBahs() -> [BAH]{
-        return svc.getEntityList("BAH") as! [BAH]
+    func getAllTechnologys() -> [Technology]{
+        return svc.getEntityList("Technology") as! [Technology]
     }
     
 }

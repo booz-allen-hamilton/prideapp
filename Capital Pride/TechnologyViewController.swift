@@ -1,6 +1,6 @@
 
 //
-//  BahViewController.swift
+//  TechnologyViewController.swift
 //  Capital Pride
 //
 //  Created by John Cloutier on 4/23/15.
@@ -9,22 +9,22 @@
 
 import UIKit
 
-class BahViewController: UITableViewController, UISearchResultsUpdating{
+class TechnologyViewController: UITableViewController, UISearchResultsUpdating{
     
     var baseBLO: BaseBLO?
-    var bahs: [BAH] = []
+    var technologys: [Technology] = []
     
-    var filteredTableData = [BAH]()
+    var filteredTableData = [Technology]()
     var resultSearchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         baseBLO = BaseBLO()
-        bahs = baseBLO!.getAllBahs()
-        bahs = sorted(bahs){ $0.name.lowercaseString < $1.name.lowercaseString }
+        technologys = baseBLO!.getAllTechnologys()
+        technologys = sorted(technologys){ $0.name.lowercaseString < $1.name.lowercaseString }
         
-        println(bahs.count)
+        println(technologys.count)
         
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -52,40 +52,42 @@ class BahViewController: UITableViewController, UISearchResultsUpdating{
             return self.filteredTableData.count
         }
         else {
-            return bahs.count
+            return technologys.count
         }
         
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("bahCell") as! UITableViewCell
-        if (self.resultSearchController.active) {
+        var cell = tableView.dequeueReusableCellWithIdentifier("technologyCell") as! UITableViewCell
+        if (self.resultSearchController.active && resultSearchController.searchBar.text != "") {
             cell.textLabel?.text = filteredTableData[indexPath.row].name
             return cell
         }
         else {
-            cell.textLabel?.text = bahs[indexPath.row].name
+            cell.textLabel?.text = technologys[indexPath.row].name
             return cell
         }
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
-        filteredTableData.removeAll(keepCapacity: false)
-        let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
-        let array = (bahs as NSArray).filteredArrayUsingPredicate(searchPredicate)
-        filteredTableData = array as! [BAH]
-        self.tableView.reloadData()
+        if(searchController.searchBar.text != ""){
+            filteredTableData.removeAll(keepCapacity: false)
+            let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
+            let array = (technologys as NSArray).filteredArrayUsingPredicate(searchPredicate)
+            filteredTableData = array as! [Technology]
+            self.tableView.reloadData()
+        }
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "BahDetailSegue"
+        if segue.identifier == "TechnologyDetailSegue"
         {
-            if let destinationVC = segue.destinationViewController as? BahDetailController{
+            if let destinationVC = segue.destinationViewController as? TechnologyDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
-                destinationVC.bah = bahs[indexPath.row]
+                destinationVC.technology = technologys[indexPath.row]
             }
         }
     }

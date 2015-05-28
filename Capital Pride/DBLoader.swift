@@ -24,6 +24,7 @@ class DBLoader: NSObject{
             loadExhibitors()
             loadFoodAndDrinks()
             loadPerformances()
+            loadTechnologys()
             loadInfo()
             svc.saveContext()
         }
@@ -73,6 +74,21 @@ class DBLoader: NSObject{
         performance.website = "http://www.cher.com"
     }
     
+    
+    func loadTechnologys(){
+        let techs: [[String]] = parseTabSeperated("Technologies", fileType: "txt", columns: 6)
+
+        for t in techs {
+            let technology: Technology = svc.getNewEntityByType("Technology") as! Technology
+            technology.image = t[0]
+            technology.name = t[1]
+            technology.poc = t[2]
+            technology.pocEmail = t[3]
+            technology.techDescription = t[4]
+            technology.url = t[5]
+        }
+    }
+    
     func loadInfo(){
         let info: Info = svc.getNewEntityByType("Info") as! Info
         info.text = "Here's some info Here's some info Here's some info Here's some info Here's some info"
@@ -97,6 +113,27 @@ class DBLoader: NSObject{
             }
         }
         return exhibs
+    }
+    
+    func parseTabSeperated(fileName: String, fileType: String, columns: Int) -> [[String]]{
+        var array = [String]()
+        var objs = [[String]]()
+        var bad = [[String]]()
+        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)
+        
+        if let content = String(contentsOfFile:path!, encoding: NSUTF8StringEncoding, error: nil) {
+            array = content.componentsSeparatedByString("\n")
+        }
+        
+        for line in array{
+            let row: [String] = split(line, allowEmptySlices: true, isSeparator: {$0 == "\t"})
+            if row.count == columns {
+                objs.append(row)
+            }else{
+                println("Bad line not added to DB: " + line)
+            }
+        }
+        return objs
     }
     
     

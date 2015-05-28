@@ -59,7 +59,7 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("exhibitorCell") as! UITableViewCell
-        if (self.resultSearchController.active) {
+        if (self.resultSearchController.active && resultSearchController.searchBar.text != "") {
             cell.textLabel?.text = filteredTableData[indexPath.row].companyName
             return cell
         }
@@ -71,11 +71,13 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
-        filteredTableData.removeAll(keepCapacity: false)
-        let searchPredicate = NSPredicate(format: "SELF.companyName CONTAINS[c] %@", searchController.searchBar.text)
-        let array = (exhibitors as NSArray).filteredArrayUsingPredicate(searchPredicate)
-        filteredTableData = array as! [Exhibitor]
-        self.tableView.reloadData()
+        if (searchController.searchBar.text != "") {
+            filteredTableData.removeAll(keepCapacity: false)
+            let searchPredicate = NSPredicate(format: "SELF.companyName CONTAINS[c] %@", searchController.searchBar.text)
+            let array = (exhibitors as NSArray).filteredArrayUsingPredicate(searchPredicate)
+            filteredTableData = array as! [Exhibitor]
+            self.tableView.reloadData()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
