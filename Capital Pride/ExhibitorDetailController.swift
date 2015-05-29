@@ -12,7 +12,7 @@ import UIKit
 class ExhibitorDetailController: UIViewController {
     
     @IBOutlet weak var companyName: UITextField!
-    @IBOutlet weak var website: UITextField!
+    @IBOutlet weak var website: UITextView!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var descriptionText: UITextView!
     

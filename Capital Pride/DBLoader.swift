@@ -56,12 +56,16 @@ class DBLoader: NSObject{
     }
     
     func loadFoodAndDrinks(){
-        let foodAndDrink: FoodAndDrink = svc.getNewEntityByType("FoodAndDrink") as! FoodAndDrink
-        foodAndDrink.boothNumber = "B45"
-        foodAndDrink.closeTime = NSTimeInterval()
-        foodAndDrink.cuisine = "Drinks"
-        foodAndDrink.name = "Beer 'n More"
-        foodAndDrink.openTime = NSTimeInterval()
+        let foods: [[String]] = parseTabSeperated("FoodAndDrink", fileType: "txt", columns: 6)
+        
+        for f in foods {
+            let foodAndDrink: FoodAndDrink = svc.getNewEntityByType("FoodAndDrink") as! FoodAndDrink
+            foodAndDrink.boothNumber = f[0]
+            //foodAndDrink.closeTime = NSTimeInterval(f[1])
+            foodAndDrink.cuisine = f[2]
+            foodAndDrink.name = f[3]
+            //foodAndDrink.openTime = NSTimeInterval(f[4])
+        }
     }
     
     func loadPerformances(){

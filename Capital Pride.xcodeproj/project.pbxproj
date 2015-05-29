@@ -35,6 +35,7 @@
 		18A05B671AEC251800C50DD9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B661AEC251800C50DD9 /* InfoViewController.swift */; };
 		18A05B691AEC256500C50DD9 /* FoodAndDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */; };
 		18A05B6C1AEC28AB00C50DD9 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A05B6A1AEC28AB00C50DD9 /* Database.xcdatamodeld */; };
+		18CE1A891B188E830049F152 /* FoodAndDrink.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1A881B188E830049F152 /* FoodAndDrink.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		18A05B661AEC251800C50DD9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18A05B681AEC256500C50DD9 /* FoodAndDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinkViewController.swift; sourceTree = "<group>"; };
 		18A05B6B1AEC28AB00C50DD9 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		18CE1A881B188E830049F152 /* FoodAndDrink.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FoodAndDrink.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				189E77991AF8451D00E8D897 /* FestivalExhibitors2015.csv */,
 				18662D1A1AE9547E0004315B /* Info.plist */,
 				183E03FF1B16814A009DC9E2 /* Technologies.txt */,
+				18CE1A881B188E830049F152 /* FoodAndDrink.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				18662D281AE9547E0004315B /* LaunchScreen.xib in Resources */,
 				183E04001B16814A009DC9E2 /* Technologies.txt in Resources */,
 				18662D251AE9547E0004315B /* Images.xcassets in Resources */,
+				18CE1A891B188E830049F152 /* FoodAndDrink.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

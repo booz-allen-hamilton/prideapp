@@ -13,7 +13,7 @@ class PerformanceDetailController: UIViewController {
     
 
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var facebook: UITextField!
+    @IBOutlet weak var facebook: UITextView!
     @IBOutlet weak var startTime: UITextField!
     @IBOutlet weak var website: UITextView!
 

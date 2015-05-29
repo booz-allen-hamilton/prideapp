@@ -15,7 +15,7 @@ class TechnologyDetailController: UIViewController {
     @IBOutlet weak var poc: UITextField!
     @IBOutlet weak var pocEmail: UITextField!
     @IBOutlet weak var techDescription: UITextView!
-    @IBOutlet weak var url: UITextField!
+    @IBOutlet weak var url: UITextView!
 
     var technology: Technology?
 
