@@ -4,7 +4,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
-      "filename" : "launch 6p.png",
+      "filename" : "PrideApp_Splash_1242.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "3x"
@@ -13,7 +13,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
-      "filename" : "launch 6p-2.png",
+      "filename" : "PrideApp_Splash_1242-2.png",
       "minimum-system-version" : "8.0",
       "orientation" : "landscape",
       "scale" : "3x"
@@ -22,7 +22,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "667h",
-      "filename" : "launch 6p-1.png",
+      "filename" : "PrideApp_Splash_1242-1.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -32,14 +32,14 @@
       "idiom" : "iphone",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "launch 6p-4.png",
+      "filename" : "PrideApp_Splash_1242-4.png",
       "scale" : "2x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "filename" : "launch 6p-3.png",
+      "filename" : "PrideApp_Splash_1242-3.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -49,7 +49,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "launch 6p-8.png",
+      "filename" : "PrideApp_Splash_1242-8.png",
       "scale" : "1x"
     },
     {
@@ -57,7 +57,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "launch 6p-6.png",
+      "filename" : "PrideApp_Splash_1242-6.png",
       "scale" : "1x"
     },
     {
@@ -65,7 +65,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "launch 6p-7.png",
+      "filename" : "PrideApp_Splash_1242-7.png",
       "scale" : "2x"
     },
     {
@@ -73,28 +73,28 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "launch 6p-5.png",
+      "filename" : "PrideApp_Splash_1242-5.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
-      "filename" : "launch 6p-11.png",
+      "filename" : "PrideApp_Splash_1242-12.png",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
-      "filename" : "launch 6p-10.png",
+      "filename" : "PrideApp_Splash_1242-10.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
-      "filename" : "launch 6p-9.png",
+      "filename" : "PrideApp_Splash_1242-9.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },
@@ -102,56 +102,56 @@
       "orientation" : "portrait",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "launch 6p-19.png",
+      "filename" : "PrideApp_Splash_1242-19.png",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
       "extent" : "full-screen",
-      "filename" : "launch 6p-17.png",
+      "filename" : "PrideApp_Splash_1242-17.png",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "launch 6p-15.png",
+      "filename" : "PrideApp_Splash_1242-15.png",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "full-screen",
-      "filename" : "launch 6p-13.png",
+      "filename" : "PrideApp_Splash_1242-13.png",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "launch 6p-18.png",
+      "filename" : "PrideApp_Splash_1242-18.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
       "extent" : "full-screen",
-      "filename" : "launch 6p-16.png",
+      "filename" : "PrideApp_Splash_1242-16.png",
       "scale" : "2x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "launch 6p-14.png",
+      "filename" : "PrideApp_Splash_1242-14.png",
       "scale" : "2x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "full-screen",
-      "filename" : "launch 6p-12.png",
+      "filename" : "PrideApp_Splash_1242-11.png",
       "scale" : "2x"
     }
   ],

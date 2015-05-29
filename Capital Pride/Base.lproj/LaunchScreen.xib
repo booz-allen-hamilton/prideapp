@@ -25,6 +25,6 @@
         </view>
     </objects>
     <resources>
-        <image name="launch" width="1242" height="2208"/>
+        <image name="launch" width="1242" height="2209"/>
     </resources>
 </document>

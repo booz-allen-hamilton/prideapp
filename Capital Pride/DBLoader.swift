@@ -22,8 +22,8 @@ class DBLoader: NSObject{
     func loadDB(){
         if dbEmpty(){
             loadExhibitors()
-            loadFoodAndDrinks()
-            loadPerformances()
+            loadJobs()
+            loadPerformers()
             loadTechnologys()
             loadInfo()
             svc.saveContext()
@@ -41,7 +41,7 @@ class DBLoader: NSObject{
     }
     
     func loadExhibitors(){
-        let exhibs: [[String]] = parseCSV()
+        let exhibs: [[String]] = parseTabSeperated("Exhibitor", fileType: "txt", columns: 4)
         
         for ex in exhibs{
             let exhibitor: Exhibitor = svc.getNewEntityByType("Exhibitor") as! Exhibitor
@@ -49,38 +49,38 @@ class DBLoader: NSObject{
             exhibitor.companyName = ex[1]
             exhibitor.descriptionText = ex[2]
             exhibitor.website = ex[3]
-            exhibitor.facebook = ex[4]
-            exhibitor.pocName = "John Cloutier"
-            exhibitor.twitter = ex[5]
         }
     }
     
-    func loadFoodAndDrinks(){
-        let foods: [[String]] = parseTabSeperated("FoodAndDrink", fileType: "txt", columns: 6)
+    func loadJobs(){
+        let jobs: [[String]] = parseTabSeperated("Jobs", fileType: "txt", columns: 4)
         
-        for f in foods {
-            let foodAndDrink: FoodAndDrink = svc.getNewEntityByType("FoodAndDrink") as! FoodAndDrink
-            foodAndDrink.boothNumber = f[0]
-            //foodAndDrink.closeTime = NSTimeInterval(f[1])
-            foodAndDrink.cuisine = f[2]
-            foodAndDrink.name = f[3]
-            //foodAndDrink.openTime = NSTimeInterval(f[4])
+        for j in jobs {
+            let job: Job = svc.getNewEntityByType("Job") as! Job
+            job.field = j[0]
+            job.fieldDescription = j[1]
+            job.url = j[2]
+            job.image = j[3]
         }
     }
     
-    func loadPerformances(){
-        let performance: Performance = svc.getNewEntityByType("Performance") as! Performance
-        performance.facebook = "fb.com/cher"
-        performance.name = "Cher"
-        performance.startTime = NSTimeInterval()
-        performance.stopTime = NSTimeInterval()
-        performance.twitter = "@cher"
-        performance.website = "http://www.cher.com"
+    func loadPerformers(){
+        let performers: [[String]] = parseTabSeperated("Performers", fileType: "txt", columns: 6)
+        
+        for p in performers {
+            let performer: Performer = svc.getNewEntityByType("Performer") as! Performer
+            performer.name = p[0]
+            performer.image = p[1]
+            performer.stage = p[2]
+            performer.startTime = p[3]
+            performer.bio = p[4]
+            performer.facebook = p[5]
+        }
     }
     
     
     func loadTechnologys(){
-        let techs: [[String]] = parseTabSeperated("Technologies", fileType: "txt", columns: 6)
+        let techs: [[String]] = parseTabSeperated("Technologys", fileType: "txt", columns: 6)
 
         for t in techs {
             let technology: Technology = svc.getNewEntityByType("Technology") as! Technology
@@ -98,26 +98,6 @@ class DBLoader: NSObject{
         info.text = "Here's some info Here's some info Here's some info Here's some info Here's some info"
     }
     
-    func parseCSV() -> [[String]]{
-        var array = [String]()
-        var exhibs = [[String]]()
-        var bad = [[String]]()
-        let path = NSBundle.mainBundle().pathForResource("FestivalExhibitors2015", ofType: "txt")
-        
-        if let content = String(contentsOfFile:path!, encoding: NSUTF8StringEncoding, error: nil) {
-            array = content.componentsSeparatedByString("\n")
-        }
-        
-        for line in array{
-            let row: [String] = split(line, allowEmptySlices: true, isSeparator: {$0 == "\t"})
-            if row.count == 7 {
-                exhibs.append(row)
-            }else{
-                println("Bad line not added to DB: " + line)
-            }
-        }
-        return exhibs
-    }
     
     func parseTabSeperated(fileName: String, fileType: String, columns: Int) -> [[String]]{
         var array = [String]()
@@ -126,7 +106,7 @@ class DBLoader: NSObject{
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)
         
         if let content = String(contentsOfFile:path!, encoding: NSUTF8StringEncoding, error: nil) {
-            array = content.componentsSeparatedByString("\n")
+            array = content.componentsSeparatedByString("--newline--\n")
         }
         
         for line in array{
@@ -134,7 +114,7 @@ class DBLoader: NSObject{
             if row.count == columns {
                 objs.append(row)
             }else{
-                println("Bad line not added to DB: " + line)
+                println("Bad line in " + fileName + " not added to DB: " + line)
             }
         }
         return objs

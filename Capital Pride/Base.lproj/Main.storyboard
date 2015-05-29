@@ -14,54 +14,70 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IL7-Jq-RXb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IL7-Jq-RXb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vO-eD-o4y">
-                                        <rect key="frame" x="17" y="86" width="934" height="414"/>
-                                        <string key="text">Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  
-Here's some additional info about Pride.  </string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="nNW-6r-7gz">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="PFG-hQ-PJ9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bahinfo" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-Tf-m0A">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="486" id="Iqa-fv-zcR"/>
+                                            <constraint firstAttribute="height" constant="536" id="eCo-yU-Fbq"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Iqa-fv-zcR"/>
+                                                <exclude reference="eCo-yU-Fbq"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="trailing" secondItem="nNW-6r-7gz" secondAttribute="trailing" id="4Xz-7c-e13"/>
+                                    <constraint firstAttribute="bottom" secondItem="yqe-Tf-m0A" secondAttribute="bottom" constant="50" id="84N-y0-xim"/>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="top" secondItem="nNW-6r-7gz" secondAttribute="bottom" id="Be2-3z-2Pv"/>
+                                    <constraint firstAttribute="trailing" secondItem="yqe-Tf-m0A" secondAttribute="trailing" id="D5h-7Q-M9c"/>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="top" secondItem="nNW-6r-7gz" secondAttribute="bottom" id="EHk-NE-JBh"/>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="top" secondItem="IL7-Jq-RXb" secondAttribute="top" constant="65" id="IGV-id-I5R"/>
+                                    <constraint firstItem="nNW-6r-7gz" firstAttribute="leading" secondItem="yqe-Tf-m0A" secondAttribute="leading" id="LYE-VE-pSW"/>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="top" secondItem="IL7-Jq-RXb" secondAttribute="top" constant="65" id="LhQ-gz-qvN"/>
+                                    <constraint firstItem="nNW-6r-7gz" firstAttribute="top" secondItem="IL7-Jq-RXb" secondAttribute="top" id="M7S-dz-66s"/>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="centerX" secondItem="IL7-Jq-RXb" secondAttribute="centerX" id="MUr-F5-5Yt"/>
+                                    <constraint firstItem="nNW-6r-7gz" firstAttribute="centerX" secondItem="IL7-Jq-RXb" secondAttribute="centerX" id="OJf-dr-TMh"/>
+                                    <constraint firstAttribute="bottom" secondItem="yqe-Tf-m0A" secondAttribute="bottom" id="VZK-UA-MUZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="yqe-Tf-m0A" secondAttribute="bottom" constant="49" id="a4U-GN-ME6"/>
+                                    <constraint firstItem="yqe-Tf-m0A" firstAttribute="leading" secondItem="IL7-Jq-RXb" secondAttribute="leading" id="l6j-ch-yKJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="84N-y0-xim"/>
+                                        <exclude reference="Be2-3z-2Pv"/>
+                                        <exclude reference="IGV-id-I5R"/>
+                                        <exclude reference="LhQ-gz-qvN"/>
+                                        <exclude reference="MUr-F5-5Yt"/>
+                                        <exclude reference="a4U-GN-ME6"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IL7-Jq-RXb" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="4WV-eh-Gfy"/>
+                            <constraint firstAttribute="trailing" secondItem="IL7-Jq-RXb" secondAttribute="trailing" id="dyz-oZ-Q7t"/>
+                            <constraint firstAttribute="bottom" secondItem="IL7-Jq-RXb" secondAttribute="bottom" id="wHE-72-dI9"/>
+                            <constraint firstItem="IL7-Jq-RXb" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="xEJ-vJ-uta"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Festival Info" id="CRH-Su-bWq"/>
+                    <navigationItem key="navigationItem" title="BAH Info" id="CRH-Su-bWq"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +142,7 @@ Here's some additional info about Pride.  </string>
                         <viewControllerLayoutGuide type="bottom" id="3dO-D4-XQq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0SY-Zx-y9u">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="8Xa-WV-hlM">
@@ -200,6 +216,9 @@ Here's some additional info about Pride.  </string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="Eb5-Xj-G8s">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -234,6 +253,7 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="8Xa-WV-hlM" firstAttribute="leading" secondItem="hsf-BO-jZV" secondAttribute="leading" id="yiU-be-8vD"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="companyName" destination="f2N-Tu-0sg" id="mcr-WC-nGB"/>
                         <outlet property="descriptionText" destination="Hxj-qf-Z1y" id="qLO-IR-UG1"/>
@@ -248,13 +268,13 @@ Here's some additional info about Pride.  </string>
         <!--Performance Detail View Controller-->
         <scene sceneID="d3M-xf-nrb">
             <objects>
-                <viewController title="Performance Detail View Controller" id="C4Q-ca-8VP" customClass="PerformanceDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Performance Detail View Controller" id="C4Q-ca-8VP" customClass="PerformerDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HaN-aF-cJh"/>
                         <viewControllerLayoutGuide type="bottom" id="oLR-th-wc8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rh2-kp-1gj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="A36-JK-JX6">
@@ -291,8 +311,8 @@ Here's some additional info about Pride.  </string>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3:00pm - 3:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="far-Aa-Xbk">
-                                <rect key="frame" x="123" y="316" width="461" height="29"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3:00pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="far-Aa-Xbk">
+                                <rect key="frame" x="123" y="316" width="461" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="9JH-Oz-n3B"/>
                                 </constraints>
@@ -317,7 +337,7 @@ Here's some additional info about Pride.  </string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" text="Lorem ipsum dolor sit er elit lt laborum." translatesAutoresizingMaskIntoConstraints="NO" id="9Sg-Ga-Zdw">
-                                <rect key="frame" x="117" y="344" width="467" height="30"/>
+                                <rect key="frame" x="117" y="344" width="467" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -337,6 +357,9 @@ Here's some additional info about Pride.  </string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="NfO-2o-duM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -374,6 +397,7 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="far-Aa-Xbk" firstAttribute="centerY" secondItem="8E4-he-WJR" secondAttribute="centerY" id="yOG-Ys-hU9"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="facebook" destination="4HJ-L8-wmh" id="KVR-V7-7cx"/>
                         <outlet property="name" destination="E3A-uF-v3J" id="crm-pJ-f0M"/>
@@ -385,10 +409,10 @@ Here's some additional info about Pride.  </string>
             </objects>
             <point key="canvasLocation" x="578" y="1232"/>
         </scene>
-        <!--Performances View Controller-->
+        <!--Performer View Controller-->
         <scene sceneID="OsJ-Zr-R48">
             <objects>
-                <tableViewController title="Performances View Controller" id="E5k-Bd-gOD" customClass="PerformanceViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Performer View Controller" id="E5k-Bd-gOD" customClass="PerformerViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MBa-ob-aHc">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,13 +426,13 @@ Here's some additional info about Pride.  </string>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="performanceCell" id="fZe-li-xvP">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="performerCell" id="fZe-li-xvP">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZe-li-xvP" id="TX1-X9-AyD">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="C4Q-ca-8VP" kind="show" identifier="PerformanceDetailSegue" id="NwU-Q5-sUb"/>
+                                    <segue destination="C4Q-ca-8VP" kind="show" identifier="PerformerDetailSegue" id="NwU-Q5-sUb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -417,7 +441,7 @@ Here's some additional info about Pride.  </string>
                             <outlet property="delegate" destination="E5k-Bd-gOD" id="AIq-0R-5tB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Performances" id="NAJ-Ez-lCg"/>
+                    <navigationItem key="navigationItem" title="Performers" id="NAJ-Ez-lCg"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="QOv-GT-Ibh" id="pwX-oC-NGl"/>
                     </connections>
@@ -497,7 +521,7 @@ Here's some additional info about Pride.  </string>
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bah-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-sX-fLC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bah-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-sX-fLC">
                                 <rect key="frame" x="16" y="90" width="568" height="142"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-Yz-oSd">
@@ -540,7 +564,7 @@ Here's some additional info about Pride.  </string>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKp-3c-0rW">
                                 <rect key="frame" x="117" y="353" width="467" height="198"/>
-                                <string key="text">http://www.google.com   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -564,6 +588,9 @@ Here's some additional info about Pride.  </string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="BPM-Dp-rE5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -599,6 +626,7 @@ Here's some additional info about Pride.  </string>
                             <constraint firstItem="6Mi-xA-tcg" firstAttribute="top" secondItem="Vsg-lZ-4Mr" secondAttribute="bottom" constant="12" id="yhc-Ze-nUZ"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="poc" destination="wq7-pf-Ebl" id="cff-nM-U89"/>
                         <outlet property="pocEmail" destination="6fP-rG-HJW" id="qYe-Yp-K1I"/>
@@ -615,8 +643,7 @@ Here's some additional info about Pride.  </string>
             <objects>
                 <navigationController id="zA0-66-9rc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Technologies" image="glass" id="aOT-Jl-yW4"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="uEK-bP-Hu0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uEK-bP-Hu0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -632,10 +659,10 @@ Here's some additional info about Pride.  </string>
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -652,10 +679,10 @@ Here's some additional info about Pride.  </string>
             </objects>
             <point key="canvasLocation" x="-1566" y="1355"/>
         </scene>
-        <!--Food And Drink View Controller-->
+        <!--Job View Controller-->
         <scene sceneID="IyC-wg-mbu">
             <objects>
-                <tableViewController title="Food And Drink View Controller" id="gMJ-CL-EKN" customClass="FoodAndDrinkViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Job View Controller" id="gMJ-CL-EKN" customClass="JobViewController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pBv-Mo-WFU">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -669,13 +696,13 @@ Here's some additional info about Pride.  </string>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="foodAndDrinkCell" id="ehY-AC-mh8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="jobCell" id="ehY-AC-mh8">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ehY-AC-mh8" id="zOM-21-2V1">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="GM2-3C-hVv" kind="show" identifier="FoodAndDrinkDetailSegue" id="cgc-si-Mxt"/>
+                                    <segue destination="GM2-3C-hVv" kind="show" identifier="JobDetailSegue" id="cgc-si-Mxt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -684,7 +711,7 @@ Here's some additional info about Pride.  </string>
                             <outlet property="delegate" destination="gMJ-CL-EKN" id="qfw-Dq-3te"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food &amp; Drink" id="O1v-wH-URP"/>
+                    <navigationItem key="navigationItem" title="Job Fields" id="O1v-wH-URP"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="aRT-8f-g2X" id="SPE-5N-AeG"/>
                     </connections>
@@ -702,86 +729,103 @@ Here's some additional info about Pride.  </string>
             </objects>
             <point key="canvasLocation" x="-135" y="-102"/>
         </scene>
-        <!--Food And Drink Detail View Controller-->
+        <!--Job Detail View Controller-->
         <scene sceneID="BT7-rX-ZoU">
             <objects>
-                <viewController title="Food And Drink Detail View Controller" id="GM2-3C-hVv" customClass="FoodAndDrinkDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Job Detail View Controller" id="GM2-3C-hVv" customClass="JobDetailController" customModule="Capital_Pride" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e8O-8w-up7"/>
                         <viewControllerLayoutGuide type="bottom" id="kMT-JK-67v"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VM7-TH-Vs5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Vendor" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-Jg-erm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-Jg-erm">
                                 <rect key="frame" x="16" y="254" width="99" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8C9-qH-agi"/>
+                                    <constraint firstAttribute="width" constant="99" id="9xN-LM-WCR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Beer N' More" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-Xg-jZx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cloud" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-Xg-jZx">
                                 <rect key="frame" x="126" y="250" width="458" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YJn-oX-pBC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45j-6A-qyD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45j-6A-qyD">
                                 <rect key="frame" x="16" y="287" width="99" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OXw-1W-dlT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Menu" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F75-7M-mjw">
-                                <rect key="frame" x="16" y="353" width="99" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F75-7M-mjw">
+                                <rect key="frame" x="16" y="322" width="99" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bDt-Xi-aPk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="B47" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChN-rT-baS">
-                                <rect key="frame" x="126" y="283" width="458" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByY-YB-gyz">
-                                <rect key="frame" x="16" y="320" width="99" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.39607846740000002" green="0.46274513010000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="11:00am - 5:00pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iob-ai-hau">
-                                <rect key="frame" x="126" y="316" width="458" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-SK-g3M">
-                                <rect key="frame" x="123" y="347" width="461" height="196"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-SK-g3M">
+                                <rect key="frame" x="123" y="316" width="461" height="196"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="6rW-gE-FoI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bah-logo" translatesAutoresizingMaskIntoConstraints="NO" id="6rW-gE-FoI">
                                 <rect key="frame" x="16" y="89" width="568" height="136"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" text="Lorem ipsum dolor sit er elit lt laborum." translatesAutoresizingMaskIntoConstraints="NO" id="FTS-0l-He0">
+                                <rect key="frame" x="120" y="281" width="467" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LJi-9S-VO3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="XdB-Sr-ibV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6rW-gE-FoI" firstAttribute="leading" secondItem="VM7-TH-Vs5" secondAttribute="leadingMargin" id="0XY-al-sSq"/>
-                            <constraint firstItem="ChN-rT-baS" firstAttribute="leading" secondItem="45j-6A-qyD" secondAttribute="trailing" constant="10" id="5Qj-6Z-OVj"/>
-                            <constraint firstItem="6rW-gE-FoI" firstAttribute="leading" secondItem="OZc-Jg-erm" secondAttribute="leading" id="7wF-a8-XGy"/>
-                            <constraint firstItem="0Cs-Xg-jZx" firstAttribute="leading" secondItem="OZc-Jg-erm" secondAttribute="trailing" constant="10" id="KYB-6p-zY4"/>
+                            <constraint firstItem="OZc-Jg-erm" firstAttribute="top" secondItem="6rW-gE-FoI" secondAttribute="bottom" constant="29" id="1pi-88-GZh"/>
+                            <constraint firstItem="FTS-0l-He0" firstAttribute="leading" secondItem="45j-6A-qyD" secondAttribute="trailing" constant="5" id="2dr-DS-f6r"/>
+                            <constraint firstItem="45j-6A-qyD" firstAttribute="trailing" secondItem="F75-7M-mjw" secondAttribute="trailing" id="4vM-xj-97e"/>
+                            <constraint firstItem="F75-7M-mjw" firstAttribute="top" secondItem="45j-6A-qyD" secondAttribute="bottom" constant="14" id="5hh-vE-A9p"/>
+                            <constraint firstItem="45j-6A-qyD" firstAttribute="trailing" secondItem="OZc-Jg-erm" secondAttribute="trailing" id="6qA-IE-4gf"/>
+                            <constraint firstItem="Hku-SK-g3M" firstAttribute="leading" secondItem="F75-7M-mjw" secondAttribute="trailing" constant="8" symbolic="YES" id="73Q-VZ-7sV"/>
+                            <constraint firstItem="6rW-gE-FoI" firstAttribute="leading" secondItem="VM7-TH-Vs5" secondAttribute="leadingMargin" id="7PW-WI-D0W"/>
+                            <constraint firstItem="45j-6A-qyD" firstAttribute="leading" secondItem="F75-7M-mjw" secondAttribute="leading" id="B3K-lq-WUH"/>
+                            <constraint firstItem="kMT-JK-67v" firstAttribute="top" secondItem="Hku-SK-g3M" secondAttribute="bottom" constant="39" id="BWQ-1A-ETx"/>
+                            <constraint firstItem="kMT-JK-67v" firstAttribute="top" secondItem="F75-7M-mjw" secondAttribute="bottom" constant="208" id="Cjm-ry-GAB"/>
+                            <constraint firstItem="45j-6A-qyD" firstAttribute="top" secondItem="OZc-Jg-erm" secondAttribute="bottom" constant="12" id="Dny-jH-5V4"/>
+                            <constraint firstItem="0Cs-Xg-jZx" firstAttribute="top" secondItem="6rW-gE-FoI" secondAttribute="bottom" constant="25" id="Iwe-k8-Hjz"/>
+                            <constraint firstItem="FTS-0l-He0" firstAttribute="top" secondItem="0Cs-Xg-jZx" secondAttribute="bottom" constant="1" id="Nqc-fr-hqa"/>
                             <constraint firstItem="6rW-gE-FoI" firstAttribute="trailing" secondItem="VM7-TH-Vs5" secondAttribute="trailingMargin" id="Oe3-BR-Zy0"/>
-                            <constraint firstItem="F75-7M-mjw" firstAttribute="trailing" secondItem="OZc-Jg-erm" secondAttribute="trailing" id="Tci-gL-3VE"/>
-                            <constraint firstItem="OZc-Jg-erm" firstAttribute="top" secondItem="6rW-gE-FoI" secondAttribute="bottom" constant="29" id="VvD-pF-ZPr"/>
-                            <constraint firstItem="Hku-SK-g3M" firstAttribute="leading" secondItem="F75-7M-mjw" secondAttribute="trailing" constant="8" id="ah2-6p-fYw"/>
-                            <constraint firstItem="kMT-JK-67v" firstAttribute="top" secondItem="Hku-SK-g3M" secondAttribute="bottom" constant="8" id="baw-mo-3gY"/>
-                            <constraint firstItem="iob-ai-hau" firstAttribute="leading" secondItem="0Cs-Xg-jZx" secondAttribute="leading" id="cWH-br-RhY"/>
-                            <constraint firstItem="iob-ai-hau" firstAttribute="leading" secondItem="ChN-rT-baS" secondAttribute="leading" id="dJ0-vv-08e"/>
-                            <constraint firstItem="F75-7M-mjw" firstAttribute="trailing" secondItem="ByY-YB-gyz" secondAttribute="trailing" id="je4-wE-PTm"/>
-                            <constraint firstItem="iob-ai-hau" firstAttribute="leading" secondItem="ByY-YB-gyz" secondAttribute="trailing" constant="10" id="jzB-oU-rvE"/>
-                            <constraint firstItem="6rW-gE-FoI" firstAttribute="top" secondItem="e8O-8w-up7" secondAttribute="bottom" constant="25" id="ltM-SB-Q5P"/>
-                            <constraint firstItem="F75-7M-mjw" firstAttribute="trailing" secondItem="45j-6A-qyD" secondAttribute="trailing" id="p2d-ey-f5a"/>
-                            <constraint firstItem="0Cs-Xg-jZx" firstAttribute="top" secondItem="6rW-gE-FoI" secondAttribute="bottom" constant="25" id="tig-qg-emX"/>
-                            <constraint firstItem="Hku-SK-g3M" firstAttribute="trailing" secondItem="6rW-gE-FoI" secondAttribute="trailing" id="yMg-sg-Kg1"/>
+                            <constraint firstItem="6rW-gE-FoI" firstAttribute="trailing" secondItem="0Cs-Xg-jZx" secondAttribute="trailing" id="PnC-HQ-D5d"/>
+                            <constraint firstItem="6rW-gE-FoI" firstAttribute="leading" secondItem="OZc-Jg-erm" secondAttribute="leading" id="fXc-Eh-pPh"/>
+                            <constraint firstItem="0Cs-Xg-jZx" firstAttribute="leading" secondItem="OZc-Jg-erm" secondAttribute="trailing" constant="11" id="iWI-vh-9Fv"/>
+                            <constraint firstItem="Hku-SK-g3M" firstAttribute="centerX" secondItem="FTS-0l-He0" secondAttribute="centerX" id="k8l-8T-mw2"/>
+                            <constraint firstItem="Hku-SK-g3M" firstAttribute="top" secondItem="FTS-0l-He0" secondAttribute="bottom" constant="5" id="lyy-IH-4cy"/>
+                            <constraint firstItem="Hku-SK-g3M" firstAttribute="trailing" secondItem="VM7-TH-Vs5" secondAttribute="trailingMargin" id="mga-Em-cVT"/>
+                            <constraint firstItem="6rW-gE-FoI" firstAttribute="top" secondItem="e8O-8w-up7" secondAttribute="bottom" constant="25" id="mpO-cs-U1P"/>
+                            <constraint firstItem="Hku-SK-g3M" firstAttribute="trailing" secondItem="0Cs-Xg-jZx" secondAttribute="trailing" id="qci-q8-QY5"/>
+                            <constraint firstItem="OZc-Jg-erm" firstAttribute="leading" secondItem="45j-6A-qyD" secondAttribute="leading" id="zle-mw-Gli"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -790,25 +834,24 @@ Here's some additional info about Pride.  </string>
                             </mask>
                         </variation>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="boothNumber" destination="ChN-rT-baS" id="OBf-Fw-6LS"/>
-                        <outlet property="cuisine" destination="Hku-SK-g3M" id="PJa-9D-HEg"/>
-                        <outlet property="name" destination="0Cs-Xg-jZx" id="JaR-XG-8e2"/>
-                        <outlet property="openTime" destination="iob-ai-hau" id="ygZ-Fo-sbp"/>
+                        <outlet property="field" destination="0Cs-Xg-jZx" id="5NM-oo-iOi"/>
+                        <outlet property="fieldDescription" destination="Hku-SK-g3M" id="rci-qE-Xe3"/>
+                        <outlet property="url" destination="FTS-0l-He0" id="PIf-Hq-GyE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdK-Y5-cY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="-102"/>
         </scene>
-        <!--Food & Drink-->
+        <!--Careers-->
         <scene sceneID="DcY-2d-9sA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQL-ZL-8Sb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Food &amp; Drink" image="beer" id="FTR-Se-Yeq"/>
+                    <tabBarItem key="tabBarItem" title="Careers" image="case" id="FTR-Se-Yeq"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="n3v-EW-MgF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n3v-EW-MgF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -827,8 +870,7 @@ Here's some additional info about Pride.  </string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5y6-RG-W5S" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="Gix-z3-TuT"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="t6o-Jz-235">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t6o-Jz-235">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -845,10 +887,9 @@ Here's some additional info about Pride.  </string>
         <scene sceneID="xeb-ss-qcF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hnd-0Z-OnZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exhibitors" image="case" id="RVq-cW-dNk"/>
+                    <tabBarItem key="tabBarItem" title="Exhibitors" image="present" id="RVq-cW-dNk"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="qJq-kA-r1W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qJq-kA-r1W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -861,14 +902,13 @@ Here's some additional info about Pride.  </string>
             </objects>
             <point key="canvasLocation" x="-843" y="-806"/>
         </scene>
-        <!--Performances-->
+        <!--Performers-->
         <scene sceneID="DYM-Tp-wKJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GZY-Cw-OxM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Performances" image="mic" id="CRv-XP-IyZ"/>
+                    <tabBarItem key="tabBarItem" title="Performers" image="mic" id="CRv-XP-IyZ"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="LTf-a5-PO5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LTf-a5-PO5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -884,11 +924,13 @@ Here's some additional info about Pride.  </string>
     </scenes>
     <resources>
         <image name="bah-logo" width="512" height="512"/>
-        <image name="beer" width="23" height="28"/>
+        <image name="bahinfo" width="582" height="890"/>
         <image name="case" width="27" height="25"/>
+        <image name="flag" width="952" height="165"/>
         <image name="glass" width="45" height="42"/>
         <image name="info" width="12" height="29"/>
         <image name="mic" width="28" height="28"/>
+        <image name="present" width="25" height="32"/>
         <image name="pride alliance" width="580" height="580"/>
     </resources>
 </document>

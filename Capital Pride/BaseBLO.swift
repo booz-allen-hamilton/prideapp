@@ -25,12 +25,12 @@ class BaseBLO: NSObject{
         return svc.getEntityList("Exhibitor") as! [Exhibitor]
     }
     
-    func getAllFoodAndDrinks() -> [FoodAndDrink]{
-        return svc.getEntityList("FoodAndDrink") as! [FoodAndDrink]
+    func getAllJobs() -> [Job]{
+        return svc.getEntityList("Job") as! [Job]
     }
     
-    func getAllPerformances() -> [Performance]{
-        return svc.getEntityList("Performance") as! [Performance]
+    func getAllPerformers() -> [Performer]{
+        return svc.getEntityList("Performer") as! [Performer]
     }
     
     func getAllInfos() -> [Info]{

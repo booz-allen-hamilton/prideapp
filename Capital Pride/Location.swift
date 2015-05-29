@@ -12,9 +12,8 @@ import CoreData
 @objc(Location)
 class Location: NSManagedObject {
 
-    @NSManaged var latitude: Double
-    @NSManaged var longitude: Double
+    @NSManaged var latitude: NSNumber
+    @NSManaged var longitude: NSNumber
     @NSManaged var exhibitor: Exhibitor
-    @NSManaged var foodAndDrink: FoodAndDrink
 
 }

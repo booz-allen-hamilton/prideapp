@@ -1,2 +1,0 @@
-Image	Name	POC	POCEmail	Description	URL
-oculus.png	Oculus	John Cloutier	cloutier_john@bah.com	The Oculus is super cool.  I promise.	http://wwww.boozallen.com
