@@ -1,5 +1,3 @@
-bah-logo	Oculus	John Cloutier	cloutier_john@bah.com	The Oculus is super cool.  I promise.	boozallen.com--newline--
-bah-logo	PixelSense	John Cloutier	cloutier_john@bah.com	The PixelSense is super cool.  I promise.	boozallen.com--newline--
 drone	Human Detection and Rescue System	Andrew Linn	linn_andrew@bah.com	Human search-and-rescue scenarios bring a host of complications and risks‚ they’re time-sensitive, dangerous, and resource-intensive. Whether on the ground, at sea, or in urban environments, rescue teams and law enforcement officials must conduct manual searches, often by foot, and put themselves in dangerous situations. To mitigate risk, responders often rely on manned aircraft for their searching needs. Yet while manned aircraft can cover large amounts of area quickly and relatively safely, they require pilots and are expensive to purchase, insure, and maintain. Searchers, rescuers, and responders need better technology that will not only reduce risk, but also work faster and free up human resources.
 
 The HDRS is Booz Allen Hamilton’s solution to answer those needs. The HDRS is a specialized Unmanned Aerial Vehicle (UAV) developed with the most cutting-edge robotics technology. It drastically cuts the costs of search-and-rescue efforts, speeds up in-field operations, and provides new detection capabilities that humans simply can’t offer. Built with an imperative to save human lives and resources, the HDRS transforms the future of search-and-rescue technology.
@@ -19,4 +17,35 @@ PORTABILITY
 The small size and vertical takeoff and landing capability allows the HDRS to travel easily. It fits in the trunk of a vehicle and deploys from flat surfaces, needing only 3 feet of diameter to take off. This makes it easy for anybody to transport the UAV and immediately deploy the system in even the most complex, austere outdoor environments.
 
 LOWER COSTS
-All of the HDRS’ advanced search capabilities come at a cost significantly lower than current manned aircraft capabilities. The HDRS carries none of the traditional costs associated with manned aerial vehicles, which typically include pilot salaries, storage, fuel, and purchase and maintenance. Moreover, its autonomy frees up operations labor and allows you to spend money elsewhere, on the resources you need most.	boozallen.com
+All of the HDRS’ advanced search capabilities come at a cost significantly lower than current manned aircraft capabilities. The HDRS carries none of the traditional costs associated with manned aerial vehicles, which typically include pilot salaries, storage, fuel, and purchase and maintenance. Moreover, its autonomy frees up operations labor and allows you to spend money elsewhere, on the resources you need most.	boozallen.com--newline--
+patton	Patton Museum AR Experience	John Cloutier	cloutier_john@bah.com	As part of the reconstruction of the General George Patton Museum of Leadership, Booz Allen used innovative technologies to enhance the museum visitor experience, creating a dialogue exploring the values embodied by great leaders throughout history. Booz Allen built a mobile museum companion that uses augmented reality to overlay historical photographs, video, and gesture-based 3D content through the museum, affording visitors the ability to directly interact with the exhibits.
+
+In one exhibit while standing on the floor markers visitors can take a photo with Patton himself. The AR app let's the visitors jump back in time AND get a free souvenir.	boozallen.com--newline--
+oculus.png	CelluVR Virtual Reality Experience	John Cloutier	cloutier_john@bah.com	Overview
+A 3D Virtual Reality tour of the human circulatory system which allows a user to see the body’s vessels and heart through a virtual nanobot, with an informative heads-up-display, gaze-based speed controls, and studio-quality narration and sound.
+
+Benefits
+A fully-immersive, interactive experience that allows individuals to:
+Learn about the human circulatory system
+Be more engaged in educational content than would be otherwise possible
+Experience a simulation of an activity that would be prohibitively expensive or dangerous outside VR	boozallen.com--newline--
+capsid	CAPSID AR Prototype	John Cloutier	cloutier_john@bah.com	Overview
+A mobile and desktop-based augmented reality application which allows for the molecule to be rendered in 3D and augmented with information tags and pointers.
+
+Benefits
+Visual tagging of salient surfaces
+Ability to convert protein data bank (.pdb) files into 3D models via 3D modeling tools
+Cloud-driven processes for model conversion, AR marker preparation, and inclusion of additional molecular models within one application	boozallen.com--newline--
+vampire	VAMPIRE™	John Cloutier	vampire@bah.com	Performing Onsite, Real-Time Mobile Forensic Collection
+Analysis, and Identification
+
+Who was here? Did your suspect touch this? Are these two prints the same? VAMPIRE™ answers these tough questions in seconds with real-time professional grade capture and matching of latent and live fingerprints. VAMPIRE™ is a rugged IP65 mobile platform built around state-of-the-art Android technology. With its fast “point-and-shoot” latent image acquisition, VAMPIRE™ doesn’t require expert forensic training for professional evidence collection and ID. VAMPIRE™ reduces workloads and lab costs, and with its triage capabilities it saves time in the field – operators and technicians can prioritize evidence in real-time.
+
+Latent to Latent
+Who was here? With multiple on-board visible and UV forensic light sources, VAMPIRE™ captures dusted latent fingerprint images directly from practically any surface. VAMPIRE™ eliminates the need to use lifting tape, which minimizes the common problem of damaging latent prints. VAMPIRE™ performs Latent-to-Latent, real-time matching across evidence at (or across) scenes and sites.
+
+Latent to Live
+Did that suspect touch this? VAMPIRE™ conducts on-site, Live-to-Latent comparisons using an integrated scanner to acquire fingerprints from a live subject. Know immediately whether the persons of interest at your scene were involved.
+
+Live or Latent to Watch List Matching
+Are these two prints the same? Whether operating with live or latent images, VAMPIRE™ exports and imports ANSI/NIST ITL EBTS-compliant fingerprint data to build an on-board watch list, and it can be integrated with external databases. Live and latent fingerprint matching against watch lists provides immediate, high-confidence identification of individuals who may be present at the scene, or the object of your search.	boozallen.com/vampire
