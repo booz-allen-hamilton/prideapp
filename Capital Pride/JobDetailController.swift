@@ -26,6 +26,10 @@ class JobDetailController: UIViewController {
         self.title = job!.field
     }
     
+    override func viewDidLayoutSubviews() {
+        fieldDescription.setContentOffset(CGPointZero, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

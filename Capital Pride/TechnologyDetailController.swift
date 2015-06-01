@@ -16,6 +16,7 @@ class TechnologyDetailController: UIViewController {
     @IBOutlet weak var pocEmail: UITextField!
     @IBOutlet weak var techDescription: UITextView!
     @IBOutlet weak var url: UITextView!
+    @IBOutlet weak var image: UIImageView!
 
     var technology: Technology?
 
@@ -27,9 +28,12 @@ class TechnologyDetailController: UIViewController {
         pocEmail.text = technology!.pocEmail
         poc.text = technology!.poc
         techDescription.text = technology!.techDescription
+        image.image = UIImage(named: technology!.image)
         self.title = technology!.name
-        
-        techDescription.setContentOffset(CGPointMake(0.0, 0.0), animated: false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        techDescription.setContentOffset(CGPointZero, animated: false)
     }
     
     override func didReceiveMemoryWarning() {

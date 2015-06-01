@@ -28,6 +28,10 @@ class ExhibitorDetailController: UIViewController {
         self.title = exhibitor!.companyName
     }
     
+    override func viewDidLayoutSubviews() {
+        descriptionText.setContentOffset(CGPointZero, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
