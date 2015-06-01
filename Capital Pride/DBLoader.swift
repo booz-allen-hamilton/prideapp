@@ -41,14 +41,15 @@ class DBLoader: NSObject{
     }
     
     func loadExhibitors(){
-        let exhibs: [[String]] = parseTabSeperated("Exhibitor", fileType: "txt", columns: 4)
+        let exhibs: [[String]] = parseTabSeperated("Exhibitor", fileType: "txt", columns: 5)
         
         for ex in exhibs{
             let exhibitor: Exhibitor = svc.getNewEntityByType("Exhibitor") as! Exhibitor
             exhibitor.boothNumber = ex[0]
             exhibitor.companyName = ex[1]
             exhibitor.descriptionText = ex[2]
-            exhibitor.website = ex[3]
+            exhibitor.image = ex[3]
+            exhibitor.website = ex[4]
         }
     }
     

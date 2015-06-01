@@ -15,6 +15,7 @@ class ExhibitorDetailController: UIViewController {
     @IBOutlet weak var website: UITextView!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var image: UIImageView!
     
     var exhibitor: Exhibitor?
     
@@ -25,6 +26,7 @@ class ExhibitorDetailController: UIViewController {
         companyName.text = exhibitor!.companyName
         descriptionText.text = exhibitor!.descriptionText
         website.text = exhibitor!.website
+        image.image = UIImage(named: exhibitor!.image)
         self.title = exhibitor!.companyName
     }
     

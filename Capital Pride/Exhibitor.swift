@@ -15,6 +15,7 @@ class Exhibitor: NSManagedObject {
     @NSManaged var boothNumber: String
     @NSManaged var companyName: String
     @NSManaged var descriptionText: String
+    @NSManaged var image: String
     @NSManaged var website: String
     @NSManaged var bootArea: String
     @NSManaged var location: Location

@@ -147,7 +147,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="8Xa-WV-hlM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride-alliance" translatesAutoresizingMaskIntoConstraints="NO" id="8Xa-WV-hlM">
                                 <rect key="frame" x="16" y="90" width="568" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="Zz3-6D-n70"/>
@@ -258,6 +258,7 @@
                     <connections>
                         <outlet property="companyName" destination="f2N-Tu-0sg" id="mcr-WC-nGB"/>
                         <outlet property="descriptionText" destination="Hxj-qf-Z1y" id="qLO-IR-UG1"/>
+                        <outlet property="image" destination="8Xa-WV-hlM" id="HsA-LB-tn3"/>
                         <outlet property="location" destination="gg0-vx-fbR" id="37J-Ia-574"/>
                         <outlet property="website" destination="zfC-4p-pcf" id="cld-2f-9Nm"/>
                     </connections>
@@ -278,7 +279,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride alliance" translatesAutoresizingMaskIntoConstraints="NO" id="A36-JK-JX6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pride-alliance" translatesAutoresizingMaskIntoConstraints="NO" id="A36-JK-JX6">
                                 <rect key="frame" x="16" y="90" width="568" height="140"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Performer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URo-fQ-6VD">
@@ -943,6 +944,6 @@
         <image name="info" width="12" height="29"/>
         <image name="mic" width="28" height="28"/>
         <image name="present" width="25" height="32"/>
-        <image name="pride alliance" width="580" height="580"/>
+        <image name="pride-alliance" width="580" height="580"/>
     </resources>
 </document>
