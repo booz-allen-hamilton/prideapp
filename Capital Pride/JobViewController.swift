@@ -36,6 +36,10 @@ class JobViewController: UITableViewController,  UISearchResultsUpdating{
             
             return controller
         })()
+        //let logo = UIImage(named: "flag.png")
+        //let imageView = UIImageView(image:logo)
+        //self.navigationItem.titleView = imageView
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,7 +75,7 @@ class JobViewController: UITableViewController,  UISearchResultsUpdating{
     {
         if(searchController.searchBar.text != ""){
             filteredTableData.removeAll(keepCapacity: false)
-            let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text)
+            let searchPredicate = NSPredicate(format: "SELF.field CONTAINS[c] %@", searchController.searchBar.text)
             let array = (jobs as NSArray).filteredArrayUsingPredicate(searchPredicate)
             filteredTableData = array as! [Job]
             self.tableView.reloadData()
@@ -84,6 +88,7 @@ class JobViewController: UITableViewController,  UISearchResultsUpdating{
             if let destinationVC = segue.destinationViewController as? JobDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
                 destinationVC.job = jobs[indexPath.row]
+                resultSearchController.active = false
             }
         }
     }

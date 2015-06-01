@@ -78,6 +78,11 @@ class TechnologyViewController: UITableViewController, UISearchResultsUpdating{
             let array = (technologys as NSArray).filteredArrayUsingPredicate(searchPredicate)
             filteredTableData = array as! [Technology]
             self.tableView.reloadData()
+        } else{
+            filteredTableData.removeAll(keepCapacity: false)
+            let array = (technologys as NSArray)
+            filteredTableData = array as! [Technology]
+            self.tableView.reloadData()
         }
     }
     
@@ -88,6 +93,7 @@ class TechnologyViewController: UITableViewController, UISearchResultsUpdating{
             if let destinationVC = segue.destinationViewController as? TechnologyDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
                 destinationVC.technology = technologys[indexPath.row]
+                resultSearchController.active = false
             }
         }
     }

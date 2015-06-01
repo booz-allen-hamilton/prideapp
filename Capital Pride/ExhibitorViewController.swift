@@ -86,6 +86,7 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
             if let destinationVC = segue.destinationViewController as? ExhibitorDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
                 destinationVC.exhibitor = exhibitors[indexPath.row]
+                resultSearchController.active = false
             }
         }
     }

@@ -83,6 +83,7 @@ class PerformerViewController: UITableViewController, UISearchResultsUpdating {
             if let destinationVC = segue.destinationViewController as? PerformerDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
                 destinationVC.performer = performers[indexPath.row]
+                resultSearchController.active = false
             }
         }
     }

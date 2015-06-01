@@ -26,7 +26,10 @@ class TechnologyDetailController: UIViewController {
         url.text = technology!.url
         pocEmail.text = technology!.pocEmail
         poc.text = technology!.poc
+        techDescription.text = technology!.techDescription
         self.title = technology!.name
+        
+        techDescription.setContentOffset(CGPointMake(0.0, 0.0), animated: false)
     }
     
     override func didReceiveMemoryWarning() {

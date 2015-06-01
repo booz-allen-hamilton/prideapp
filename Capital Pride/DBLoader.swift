@@ -65,7 +65,7 @@ class DBLoader: NSObject{
     }
     
     func loadPerformers(){
-        let performers: [[String]] = parseTabSeperated("Performers", fileType: "txt", columns: 6)
+        let performers: [[String]] = parseTabSeperated("Performer", fileType: "txt", columns: 6)
         
         for p in performers {
             let performer: Performer = svc.getNewEntityByType("Performer") as! Performer
@@ -80,7 +80,7 @@ class DBLoader: NSObject{
     
     
     func loadTechnologys(){
-        let techs: [[String]] = parseTabSeperated("Technologys", fileType: "txt", columns: 6)
+        let techs: [[String]] = parseTabSeperated("Technology", fileType: "txt", columns: 6)
 
         for t in techs {
             let technology: Technology = svc.getNewEntityByType("Technology") as! Technology

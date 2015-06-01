@@ -15,8 +15,8 @@ class PerformerDetailController: UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var facebook: UITextView!
     @IBOutlet weak var startTime: UITextField!
-    @IBOutlet weak var website: UITextView!
-
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var bio: UITextView!
     
     var performer: Performer?
     
@@ -26,6 +26,7 @@ class PerformerDetailController: UIViewController {
         name.text = performer!.name
         facebook.text = performer!.facebook
         startTime.text = performer?.startTime
+        image.image = UIImage(named: performer!.image)
         self.title = performer!.name
     }
     
