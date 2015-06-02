@@ -36,9 +36,8 @@ class JobViewController: UITableViewController,  UISearchResultsUpdating{
             
             return controller
         })()
-        //let logo = UIImage(named: "flag.png")
-        //let imageView = UIImageView(image:logo)
-        //self.navigationItem.titleView = imageView
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "flag")!)
 
     }
     

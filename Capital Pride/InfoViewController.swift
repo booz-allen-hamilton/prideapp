@@ -10,6 +10,11 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    
+    @IBOutlet weak var whatwedo: UIButton!
+    @IBOutlet weak var diversity: UIButton!
+    @IBOutlet weak var careers: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,29 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    @IBAction func linkClicked(sender: UIButton) {
+
+        let label: String = sender.titleLabel!.text!
+        switch label {
+            
+            case "WHAT WE DO":
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://www.boozallen.com/consulting")!)
+            case "CAREERS":
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://www.boozallen.com/careers")!)
+            case "DIVERSITY":
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://www.boozallen.com/about/diversity-inclusion")!)
+            default:
+                println("Unrecognized button: " + sender.titleLabel!.text!)
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://boozallen.com")!)
+        }
+        
+
+        
+        
+    }
+    
+
     
 }
 

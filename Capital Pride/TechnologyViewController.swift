@@ -37,6 +37,8 @@ class TechnologyViewController: UITableViewController, UISearchResultsUpdating{
             return controller
         })()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "flag")!)
+        
         // Reload the table
         self.tableView.reloadData()
     }

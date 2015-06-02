@@ -35,6 +35,9 @@ class PerformerViewController: UITableViewController, UISearchResultsUpdating {
             
             return controller
         })()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "flag")!)
+        
     }
     
     override func didReceiveMemoryWarning() {
