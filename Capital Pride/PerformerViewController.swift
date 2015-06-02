@@ -36,7 +36,8 @@ class PerformerViewController: UITableViewController, UISearchResultsUpdating {
             return controller
         })()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "flag")!)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "flag-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
+        
         
     }
     
