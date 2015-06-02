@@ -18,10 +18,10 @@ The small size and vertical takeoff and landing capability allows the HDRS to tr
 
 LOWER COSTS
 All of the HDRSÕ advanced search capabilities come at a cost significantly lower than current manned aircraft capabilities. The HDRS carries none of the traditional costs associated with manned aerial vehicles, which typically include pilot salaries, storage, fuel, and purchase and maintenance. Moreover, its autonomy frees up operations labor and allows you to spend money elsewhere, on the resources you need most.	boozallen.com--newline--
-paton	Patton Museum AR Experience	John Cloutier	cloutier_john@bah.com	As part of the reconstruction of the General George Patton Museum of Leadership, Booz Allen used innovative technologies to enhance the museum visitor experience, creating a dialogue exploring the values embodied by great leaders throughout history. Booz Allen built a mobile museum companion that uses augmented reality to overlay historical photographs, video, and gesture-based 3D content through the museum, affording visitors the ability to directly interact with the exhibits.
+paton	Patton Museum AR Experience	Emily Duff	duff_emily@bah.com	As part of the reconstruction of the General George Patton Museum of Leadership, Booz Allen used innovative technologies to enhance the museum visitor experience, creating a dialogue exploring the values embodied by great leaders throughout history. Booz Allen built a mobile museum companion that uses augmented reality to overlay historical photographs, video, and gesture-based 3D content through the museum, affording visitors the ability to directly interact with the exhibits.
 
 In one exhibit while standing on the floor markers visitors can take a photo with Patton himself. The AR app let's the visitors jump back in time AND get a free souvenir.	boozallen.com--newline--
-oculus.png	CelluVR Virtual Reality Experience	John Cloutier	cloutier_john@bah.com	Overview
+oculus.png	CelluVR Virtual Reality Experience	Sam Levine	levine_samuel@bah.com	Overview
 A 3D Virtual Reality tour of the human circulatory system which allows a user to see the bodyÕs vessels and heart through a virtual nanobot, with an informative heads-up-display, gaze-based speed controls, and studio-quality narration and sound.
 
 Benefits
@@ -29,14 +29,14 @@ A fully-immersive, interactive experience that allows individuals to:
 Learn about the human circulatory system
 Be more engaged in educational content than would be otherwise possible
 Experience a simulation of an activity that would be prohibitively expensive or dangerous outside VR	boozallen.com--newline--
-capsid	CAPSID AR Prototype	John Cloutier	cloutier_john@bah.com	Overview
+capsid	CAPSID AR Prototype	Emily Duff	emily_duff@bah.com	Overview
 A mobile and desktop-based augmented reality application which allows for the molecule to be rendered in 3D and augmented with information tags and pointers.
 
 Benefits
 Visual tagging of salient surfaces
 Ability to convert protein data bank (.pdb) files into 3D models via 3D modeling tools
 Cloud-driven processes for model conversion, AR marker preparation, and inclusion of additional molecular models within one application	boozallen.com--newline--
-vampire	VAMPIREª	John Cloutier	vampire@bah.com	Performing Onsite, Real-Time Mobile Forensic Collection
+vampire	VAMPIREª	Adam Weiner, Jonathan Levitt	vampire@bah.com	Performing Onsite, Real-Time Mobile Forensic Collection
 Analysis, and Identification
 
 Who was here? Did your suspect touch this? Are these two prints the same? VAMPIREª answers these tough questions in seconds with real-time professional grade capture and matching of latent and live fingerprints. VAMPIREª is a rugged IP65 mobile platform built around state-of-the-art Android technology. With its fast Òpoint-and-shootÓ latent image acquisition, VAMPIREª doesnÕt require expert forensic training for professional evidence collection and ID. VAMPIREª reduces workloads and lab costs, and with its triage capabilities it saves time in the field Ð operators and technicians can prioritize evidence in real-time.	
