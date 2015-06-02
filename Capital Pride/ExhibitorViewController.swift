@@ -37,6 +37,7 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
         })()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "flag-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.translucent = false
         
         // Reload the table
         self.tableView.reloadData()
