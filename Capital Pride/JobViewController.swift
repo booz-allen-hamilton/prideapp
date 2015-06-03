@@ -38,12 +38,12 @@ class JobViewController: UITableViewController,  UISearchResultsUpdating{
         })()
  
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "rainbow-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.translucent = false
+        //self.navigationController?.navigationBar.translucent = false
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,7 +86,12 @@ class JobViewController: UITableViewController,  UISearchResultsUpdating{
         {
             if let destinationVC = segue.destinationViewController as? JobDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
-                destinationVC.job = jobs[indexPath.row]
+                if(self.resultSearchController.active){
+                    destinationVC.job = filteredTableData[indexPath.row]
+                }else{
+                   destinationVC.job = jobs[indexPath.row]
+                }
+                
                 resultSearchController.active = false
             }
         }

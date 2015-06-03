@@ -37,15 +37,15 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
         })()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "rainbow-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.translucent = false
+        //self.navigationController?.navigationBar.translucent = false
         
         // Reload the table
         self.tableView.reloadData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,7 +71,7 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
             return cell
         }
     }
-    
+
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         if (searchController.searchBar.text != "") {
@@ -88,7 +88,11 @@ class ExhibitorViewController: UITableViewController, UISearchResultsUpdating{
         {
             if let destinationVC = segue.destinationViewController as? ExhibitorDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
-                destinationVC.exhibitor = exhibitors[indexPath.row]
+                if(self.resultSearchController.active){
+                    destinationVC.exhibitor = filteredTableData[indexPath.row]
+                }else{
+                    destinationVC.exhibitor = exhibitors[indexPath.row]
+                }
                 resultSearchController.active = false
             }
         }

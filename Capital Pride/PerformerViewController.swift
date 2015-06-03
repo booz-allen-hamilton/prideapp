@@ -37,13 +37,13 @@ class PerformerViewController: UITableViewController, UISearchResultsUpdating {
         })()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "rainbow-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.translucent = false
+        //self.navigationController?.navigationBar.translucent = false
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,7 +86,12 @@ class PerformerViewController: UITableViewController, UISearchResultsUpdating {
         {
             if let destinationVC = segue.destinationViewController as? PerformerDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
-                destinationVC.performer = performers[indexPath.row]
+                if(self.resultSearchController.active){
+                    destinationVC.performer = filteredTableData[indexPath.row]
+                }else{
+                    destinationVC.performer = performers[indexPath.row]
+                }
+                
                 resultSearchController.active = false
             }
         }

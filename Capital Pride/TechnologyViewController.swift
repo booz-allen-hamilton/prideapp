@@ -38,15 +38,15 @@ class TechnologyViewController: UITableViewController, UISearchResultsUpdating{
         })()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "rainbow-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.translucent = false
+        //self.navigationController?.navigationBar.translucent = false
         
         // Reload the table
         self.tableView.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +95,11 @@ class TechnologyViewController: UITableViewController, UISearchResultsUpdating{
         {
             if let destinationVC = segue.destinationViewController as? TechnologyDetailController{
                 let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
-                destinationVC.technology = technologys[indexPath.row]
+                if(self.resultSearchController.active){
+                    destinationVC.technology = filteredTableData[indexPath.row]
+                }else{
+                    destinationVC.technology = technologys[indexPath.row]
+                }
                 resultSearchController.active = false
             }
         }

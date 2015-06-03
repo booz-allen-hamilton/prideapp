@@ -21,11 +21,6 @@ class InfoViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "rainbow-header")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     @IBAction func linkClicked(sender: UIButton) {
 
@@ -42,10 +37,7 @@ class InfoViewController: UIViewController {
                 println("Unrecognized button: " + sender.titleLabel!.text!)
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://boozallen.com")!)
         }
-        
-
-        
-        
+         
     }
     
 
