@@ -22,7 +22,7 @@ class ExhibitorDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        location.text = exhibitor!.boothNumber
+        //location.text = exhibitor!.boothNumber
         companyName.text = exhibitor!.companyName
         descriptionText.text = exhibitor!.descriptionText
         website.text = exhibitor!.website

@@ -27,11 +27,11 @@ class InfoViewController: UIViewController {
         let label: String = sender.titleLabel!.text!
         switch label {
             
-            case "WHAT WE DO":
+            case "ABOUT BOOZ ALLEN":
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://www.boozallen.com/consulting")!)
-            case "CAREERS":
+            case "WORK WITH US":
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://www.boozallen.com/careers")!)
-            case "DIVERSITY":
+            case "OUR PEOPLE":
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://www.boozallen.com/about/diversity-inclusion")!)
             default:
                 println("Unrecognized button: " + sender.titleLabel!.text!)
