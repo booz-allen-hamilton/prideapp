@@ -19,24 +19,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bah-info" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-Tf-m0A">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ourpeople" translatesAutoresizingMaskIntoConstraints="NO" id="lui-vc-bda">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="184"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mB-1l-PPg">
-                                <rect key="frame" x="228" y="212" width="143" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="WHAT WE DO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="linkClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5CL-fw-0PV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-d4-tAu">
-                                <rect key="frame" x="228" y="364" width="143" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="DIVERSITY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="aboutbooz" translatesAutoresizingMaskIntoConstraints="NO" id="eFt-RK-mRC">
+                                <rect key="frame" x="0.0" y="368" width="600" height="183"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="workwithus" translatesAutoresizingMaskIntoConstraints="NO" id="2bN-nA-Key">
+                                <rect key="frame" x="0.0" y="184" width="600" height="184"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-d4-tAu">
+                                <rect key="frame" x="185" y="77" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bfd-Re-Hdo"/>
+                                    <constraint firstAttribute="width" constant="230" id="lZW-Ic-Z8K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                <state key="normal" title="OUR PEOPLE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,9 +44,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avI-m1-DyO">
-                                <rect key="frame" x="228" y="288" width="143" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="CAREERS">
+                                <rect key="frame" x="170" y="261" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="KsG-nw-h4b"/>
+                                    <constraint firstAttribute="height" constant="30" id="x66-0m-amR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                <state key="normal" title="WORK WITH US">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,19 +58,44 @@
                                     <action selector="linkClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Jsg-44-6GE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mB-1l-PPg">
+                                <rect key="frame" x="120" y="445" width="360" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="veJ-xX-gU9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                <state key="normal" title="ABOUT BOOZ ALLEN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5CL-fw-0PV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AHc-d4-tAu" firstAttribute="top" secondItem="avI-m1-DyO" secondAttribute="bottom" constant="46" id="Au4-9C-S1D"/>
-                            <constraint firstItem="avI-m1-DyO" firstAttribute="top" secondItem="4mB-1l-PPg" secondAttribute="bottom" constant="46" id="a3I-pG-eXg"/>
-                            <constraint firstAttribute="trailing" secondItem="yqe-Tf-m0A" secondAttribute="trailing" id="f2X-gh-TnB"/>
-                            <constraint firstAttribute="centerX" secondItem="AHc-d4-tAu" secondAttribute="centerX" id="nUY-rI-4wn"/>
-                            <constraint firstAttribute="bottom" secondItem="yqe-Tf-m0A" secondAttribute="bottom" id="o3w-Dy-l6F"/>
-                            <constraint firstItem="yqe-Tf-m0A" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="r5K-Ji-uin"/>
-                            <constraint firstItem="yqe-Tf-m0A" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="s3d-T0-x48"/>
-                            <constraint firstAttribute="centerX" secondItem="avI-m1-DyO" secondAttribute="centerX" id="teH-8f-JJ6"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="AHc-d4-tAu" secondAttribute="bottom" constant="180" id="tl6-Xc-N0L"/>
-                            <constraint firstAttribute="centerX" secondItem="4mB-1l-PPg" secondAttribute="centerX" id="xVg-Hq-pPt"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="height" secondItem="2bN-nA-Key" secondAttribute="height" id="1Hy-SQ-ZA8"/>
+                            <constraint firstItem="AHc-d4-tAu" firstAttribute="centerY" secondItem="lui-vc-bda" secondAttribute="centerY" id="1KY-RP-YSU"/>
+                            <constraint firstItem="avI-m1-DyO" firstAttribute="centerY" secondItem="2bN-nA-Key" secondAttribute="centerY" id="2Gx-yK-TZQ"/>
+                            <constraint firstItem="4mB-1l-PPg" firstAttribute="top" secondItem="2bN-nA-Key" secondAttribute="bottom" constant="77" id="4KM-8F-JJV"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="leading" secondItem="2bN-nA-Key" secondAttribute="leading" id="7ic-nG-4qF"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="centerX" secondItem="AHc-d4-tAu" secondAttribute="centerX" id="EDX-cN-1Pq"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="trailing" secondItem="2bN-nA-Key" secondAttribute="trailing" id="J5G-dG-OX9"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="JLs-Zm-bHh"/>
+                            <constraint firstItem="eFt-RK-mRC" firstAttribute="centerX" secondItem="4mB-1l-PPg" secondAttribute="centerX" id="M4L-2d-iDF"/>
+                            <constraint firstItem="eFt-RK-mRC" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="UHI-qV-mmA"/>
+                            <constraint firstItem="avI-m1-DyO" firstAttribute="top" secondItem="lui-vc-bda" secondAttribute="bottom" constant="77" id="YMJ-hQ-SNH"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="height" secondItem="eFt-RK-mRC" secondAttribute="height" id="cs7-Qe-g27"/>
+                            <constraint firstAttribute="trailing" secondItem="lui-vc-bda" secondAttribute="trailing" id="fmc-ZM-dTe"/>
+                            <constraint firstItem="lui-vc-bda" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="jgi-OO-evF"/>
+                            <constraint firstItem="eFt-RK-mRC" firstAttribute="top" secondItem="avI-m1-DyO" secondAttribute="bottom" constant="77" id="pAM-7X-g32"/>
+                            <constraint firstItem="eFt-RK-mRC" firstAttribute="leading" secondItem="2bN-nA-Key" secondAttribute="leading" id="qTy-Tp-Em9"/>
+                            <constraint firstItem="eFt-RK-mRC" firstAttribute="trailing" secondItem="2bN-nA-Key" secondAttribute="trailing" id="rSC-a3-ujK"/>
+                            <constraint firstItem="AHc-d4-tAu" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="77" id="uOi-4W-Y1Z"/>
+                            <constraint firstItem="avI-m1-DyO" firstAttribute="centerX" secondItem="2bN-nA-Key" secondAttribute="centerX" id="wNp-Ew-tXk"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="4mB-1l-PPg" secondAttribute="bottom" constant="76" id="xeL-sA-hFJ"/>
+                            <constraint firstItem="2bN-nA-Key" firstAttribute="top" secondItem="AHc-d4-tAu" secondAttribute="bottom" constant="77" id="y3d-Di-d73"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BAH Info" id="CRH-Su-bWq"/>
@@ -941,13 +969,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aboutbooz" width="1242" height="621"/>
         <image name="bah" width="32" height="32"/>
-        <image name="bah-info" width="500" height="890"/>
         <image name="bah-logo" width="512" height="512"/>
         <image name="glasses" width="45" height="42"/>
         <image name="info" width="12" height="29"/>
         <image name="mic" width="28" height="28"/>
+        <image name="ourpeople" width="1242" height="624"/>
         <image name="present" width="25" height="32"/>
         <image name="pride-alliance" width="580" height="580"/>
+        <image name="workwithus" width="1242" height="621"/>
     </resources>
 </document>
